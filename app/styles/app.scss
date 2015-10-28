@@ -12,13 +12,42 @@
   font-family: "ff-tisa-web-pro";
   font-weight: 400;
   font-style: italic;
+  font-size: 1em;
 }
 
 .article-title {
   font-family: "freight-sans-pro";
   font-weight: 700;
+}
 
-  max-width: 600px;
+.article-title-preview {
+  font-family: "freight-sans-pro";
+  font-weight: 700;
+  font-size: 1.5em;
+
+  max-width: 500px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Links */
+.title-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.external-link {
+  text-decoration: underline;
+  color: #999999;
+}
+
+.bullet {
+  color: #999999;
+}
+
+.article-preview-author {
+  color: #999999;
 }
 
 /* Article wrappers */
@@ -26,7 +55,7 @@
   list-style: none;
   padding: 0;
   margin-bottom: em(50);
-  max-width: 700px;
+  max-width: 600px;
 }
 
 /* List-item styles */

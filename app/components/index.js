@@ -126,8 +126,8 @@ var Index = React.createClass({
               return (
                   <div className="articles-wrapper" key={articles.objectId}>
                     <ul className="article-preview-wrapper">
-                      <li className="article-component"><h1 className="article-title"><Link to={`/article/${result.objectId}`}>{result.title}</Link></h1></li>
-                      <li className="article-component"><h3 className="article-link"><a href={result.url} target="_blank">{result.domain}</a></h3></li>
+                      <li className="article-component"><h1 className="article-title-preview"><Link to={`/article/${result.objectId}`} className="title-link">{result.title}</Link></h1></li>
+                      <li className="article-component"><h3 className="article-link"><a className="external-link" href={result.url} target="_blank">{result.domain}</a> <span className="bullet">&#8226;</span> <span className="article-preview-author">by {result.author}</span></h3></li>
                       <li className="article-component"><p className="article-content">{result.excerpt}</p></li>
                     </ul>
                   </div>

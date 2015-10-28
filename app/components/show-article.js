@@ -31,11 +31,11 @@ const ShowArticle = React.createClass({
     let content;
 
     content = (
-      <ul className="article-preview-wrapper">
+      <ul className="article-wrapper">
         <li className="article-component"><h1 className="article-title">{article.title}</h1></li>
-        <li className="article-component"><h3 className="article-link"><a href={article.url} target="_blank">{article.domain}</a></h3></li>
+        <li className="article-component"><h3 className="article-link"><a className="external-link" href={article.url} target="_blank">{article.domain}</a></h3></li>
         <ul className="article-meta">
-          <li className="article-meta-component">By {article.author}</li>
+          <li className="article-meta-component">by {article.author}</li>
           <li classNAme="article-meta-component">{article.datePublished}</li>
         </ul>
         <li className="article-component"><p className="article-content">{article.content}</p></li>
