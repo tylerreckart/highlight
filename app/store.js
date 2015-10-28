@@ -1,9 +1,17 @@
 import $ from 'jquery';
 import Backbone from 'backbone';
 
-let collection;
+import Article from './models/article';
+import ArticlesCollection from './models/articles-collection';
+
+let articles;
+
 export default {
-  getCollection() {
-    return (collection = collection || new Backbone.Collection());
+  getArticlesCollection() {
+    return (articles = articles || new ArticlesCollection());
+  },
+
+  getNewArticle() {
+    return new Article();
   }
 };
