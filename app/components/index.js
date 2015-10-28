@@ -1,6 +1,6 @@
 import React from 'react';
 import store from '../store';
-import { History } from 'react-router';
+import { History, Link } from 'react-router';
 
 import Article from '../models/article';
 import ArticlesCollection from '../models/articles-collection';
@@ -126,9 +126,9 @@ var Index = React.createClass({
               return (
                   <div className="articles-wrapper" key={articles.objectId}>
                     <ul className="article-preview-wrapper">
-                      <li className="article-component"><h1 className="articles-title">{result.title}</h1></li>
-                      <li className="article-component"><h3 className="articles-link"><a href={result.url} target="_blank">{result.domain}</a></h3></li>
-                      <li className="article-component"><p className="articles-content">{result.excerpt}</p></li>
+                      <li className="article-component"><h1 className="article-title"><Link to={`/article/${result.objectId}`}>{result.title}</Link></h1></li>
+                      <li className="article-component"><h3 className="article-link"><a href={result.url} target="_blank">{result.domain}</a></h3></li>
+                      <li className="article-component"><p className="article-content">{result.excerpt}</p></li>
                     </ul>
                   </div>
               );

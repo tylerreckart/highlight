@@ -1,3 +1,36 @@
 @import 'bourbon';
 @import 'neat';
 @import '~font-awesome/scss/font-awesome.scss';
+
+.article-content {
+  font-family: "ff-tisa-web-pro";
+  font-weight: 400;
+  font-style: normal;
+}
+
+.article-link {
+  font-family: "ff-tisa-web-pro";
+  font-weight: 400;
+  font-style: italic;
+}
+
+.article-title {
+  font-family: "freight-sans-pro";
+  font-weight: 700;
+
+  max-width: 600px;
+}
+
+/* Article wrappers */
+.article-preview-wrapper {
+  list-style: none;
+  padding: 0;
+  margin-bottom: em(50);
+  max-width: 700px;
+}
+
+/* List-item styles */
+.article-component {
+  margin-top: em(-10);
+  padding: 0;
+}
