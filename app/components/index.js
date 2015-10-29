@@ -5,6 +5,8 @@ import { History, Link } from 'react-router';
 import Article from '../models/article';
 import ArticlesCollection from '../models/articles-collection';
 
+import Glance from './glance';
+
 import $ from 'jquery';
 
 var Index = React.createClass({
@@ -72,63 +74,37 @@ var Index = React.createClass({
     });
   },
 
+  toggleVisibility() {
+    $('.glance').toggle();
+  },
+
   render() {
     let articles = (this.state.articles && this.state.articles.toJSON()) || [];
     let content;
-
-    if(this.state.isEditing) {
-      content = (
-        <ul className="article-list-wrapper isEditing">
-        <div className="article-grabber">
-          <form className="article-grabber-form" onSubmit={this.handleSubmit}>
-            <input className="article-grabber-input" type="text" placeholder="articles url (e.g http://wikipedia.org/wiki/penguin)" defaultValue={this.props.url} ref="articlesUrl" />
-            <button className="grab-btn" type="submit">+</button>
-          </form>
-        </div>
-        {
-          articles.map((result) => {
-            return (
-              <div className="application-container">
-                <div className="article-grabber">
-                  <form className="article-grabber-form" onSubmit={this.handleSubmit}>
-                    <input className="article-grabber-input" type="text" placeholder="articles url (e.g http://wikipedia.org/wiki/penguin)" defaultValue={this.props.url} ref="articlesUrl" />
-                    <button className="grab-btn" type="submit">+</button>
-                  </form>
-                </div>
-                <div className="article-wrapper" key={articles.objectId}>
-                  <h1 className="article-title">{result.title}</h1>
-                  <h3 className="article-link">{result.url}</h3>
-                  <p className="article-content">{result.content}</p>
-
-                  <form className="tag-input-form">
-                    <input className="tag-input" type="text" defaultValue={articles.tags} ref="tags" />
-                    <button className="save-btn" type="submit" onClick={this.handleSave.bind(this, articles)}>Save</button>
-                    <button className="destroy-btn" type="submit" onClick={this.handleDestroy.bind(this, articles)}>Delete articles</button>
-                  </form>
-                </div>
-              </div>
-            );
-          })
-        }
-        </ul>
-      );
-     } else {
        content = (
          <ul className="article-list-wrapper">
          <div className="article-grabber">
            <form className="article-grabber-form" onSubmit={this.handleSubmit}>
              <input className="article-grabber-input" type="text" placeholder="article url (e.g http://wikipedia.org/wiki/penguin)" defaultValue={this.props.url} ref="articlesUrl" />
-             <button className="grab-btn" type="submit">+</button>
+             <button className="article-grabber-btn" type="submit">+</button>
            </form>
          </div>
           {
             articles.map((result) => {
               return (
-                  <div className="articles-wrapper" key={articles.objectId}>
+                  <div className="articles-wrapper" key={result.objectId}>
                     <ul className="article-preview-wrapper">
-                      <li className="article-component"><h1 className="article-title-preview"><Link to={`/article/${result.objectId}`} className="title-link">{result.title}</Link></h1></li>
-                      <li className="article-component"><h3 className="article-link"><a className="external-link" href={result.url} target="_blank">{result.domain}</a> <span className="bullet">&#8226;</span> <span className="article-preview-author">by {result.author}</span></h3></li>
-                      <li className="article-component"><p className="article-content">{result.excerpt}</p></li>
+                      <Glance className="glance-view"/>
+                      <li className="article-component">
+                        <h1 className="article-title-preview"><Link to={`/article/${result.objectId}`} className="title-link">{result.title}</Link></h1>
+                        <button id="show-glance" onClick={this.toggleVisibility.bind(this, result)}><i className="fa fa-eye"></i></button>
+                      </li>
+                      <li className="article-component">
+                        <span className="article-preview-author">{result.author}</span>
+                      </li>
+                      <li className="article-component">
+                        <p className="article-content exceprt" dangerouslySetInnerHTML={{__html: result.excerpt}} />
+                      </li>
                     </ul>
                   </div>
               );
@@ -136,7 +112,6 @@ var Index = React.createClass({
           }
          </ul>
        );
-     }
      return content;
   }
 });

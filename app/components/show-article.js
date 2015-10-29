@@ -3,6 +3,8 @@ import store from '../store';
 import Article from '../models/article';
 import { History } from 'react-router';
 
+import $ from 'jquery';
+
 const ShowArticle = React.createClass({
   mixins: [History],
 
@@ -29,16 +31,16 @@ const ShowArticle = React.createClass({
   render() {
     let article = (this.state.article && this.state.article.toJSON()) || {};
     let content;
-
+    // let poof = $('.article-content').html(article.attributes.content).text();
     content = (
       <ul className="article-wrapper">
         <li className="article-component"><h1 className="article-title">{article.title}</h1></li>
         <li className="article-component"><h3 className="article-link"><a className="external-link" href={article.url} target="_blank">{article.domain}</a></h3></li>
         <ul className="article-meta">
-          <li className="article-meta-component">by {article.author}</li>
-          <li classNAme="article-meta-component">{article.datePublished}</li>
+          <li className="article-meta-component">{article.author}</li>
+          <li className="article-meta-component">{article.datePublished}</li>
         </ul>
-        <li className="article-component"><p className="article-content">{article.content}</p></li>
+        <li className="article-component"><div className="article-content" dangerouslySetInnerHTML={{ __html: article.content}}/></li>
         <li className="article-component"><p className="article-word-count">{article.wordCount}</p></li>
       </ul>
     );

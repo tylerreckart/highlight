@@ -16,8 +16,9 @@ var App = React.createClass({
             </li>
           </ul>
         </nav>
-
-        {this.props.children}
+        <div className="body-content">
+          {this.props.children}
+        </div>
       </div>
     );
   }
