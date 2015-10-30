@@ -94,10 +94,9 @@ var Index = React.createClass({
               return (
                   <div className="articles-wrapper" key={result.objectId}>
                     <ul className="article-preview-wrapper">
-                      <Glance className="glance-view"/>
+                      <Glance className="glance-view clearfix"/>
                       <li className="article-component">
-                        <h1 className="article-title-preview"><Link to={`/article/${result.objectId}`} className="title-link">{result.title}</Link></h1>
-                        <button id="show-glance" onClick={this.toggleVisibility.bind(this, result)}><i className="fa fa-eye"></i></button>
+                        <h1 className="article-title-preview"><Link to={`/article/${result.objectId}`} className="title-link butts">{result.title}</Link></h1>
                       </li>
                       <li className="article-component">
                         <span className="article-preview-author">{result.author}</span>
@@ -105,6 +104,45 @@ var Index = React.createClass({
                       <li className="article-component">
                         <p className="article-content exceprt" dangerouslySetInnerHTML={{__html: result.excerpt}} />
                       </li>
+
+                      <ul className="article-options">
+                        <li className="article-option">
+                          <button className="option-toggle" onClick={this.toggleVisibility.bind(this, result)}><i className="fa fa-eye"></i></button>
+                          <span className="tooltip">
+                            <span className="triangle" />
+                            <span className="tooltip-body">Glance</span>
+                          </span>
+                        </li>
+                        <li className="article-option">
+                          <button className="option-toggle"><i className="fa fa-heart-o"></i></button>
+                          <span className="tooltip">
+                            <span className="triangle" />
+                            <span className="tooltip-body">Favorite</span>
+                          </span>
+                        </li>
+                        <li className="article-option">
+                          <button className="option-toggle"><i className="fa fa-sticky-note-o"></i></button>
+                          <span className="tooltip">
+                            <span className="triangle" />
+                            <span className="tooltip-body">Archive</span>
+                          </span>
+                        </li>
+                        <li className="article-option">
+                          <button className="option-toggle" onClick={this.handleDestroy.bind(this, result)}><i className="fa fa-trash-o"></i></button>
+                          <span className="tooltip">
+                            <span className="triangle" />
+                            <span className="tooltip-body">Delete</span>
+                          </span>
+                        </li>
+                        <li className="article-option">
+                          <button className="option-toggle"><i className="fa fa-hand-o-right"></i></button>
+                          <span className="tooltip">
+                            <span className="triangle" />
+                            <span className="tooltip-body">Share</span>
+                          </span>
+                        </li>
+                      </ul>
+
                     </ul>
                   </div>
               );
