@@ -18,9 +18,14 @@ $red: #DA4C56;
   margin: 0 auto;
 }
 
+.article-list-wrapper {
+  padding: 0;
+}
+
 .top-bar {
   max-width: 800px;
   margin: 0 auto;
+  position: relative;
   margin-bottom: em(30);
 }
 
@@ -34,7 +39,26 @@ $red: #DA4C56;
 }
 
 .title-area {
+  padding: 0;
   list-style: none;
+}
+
+.title-options {
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  right: 0;
+  top: -5px;
+}
+
+.nav-option {
+  padding-left: 20px;
+  font-size: 14px;
+  float: left;
+
+  &:first-child {
+    padding-left: 0px;
+  }
 }
 
 .article-content {
