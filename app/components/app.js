@@ -12,7 +12,7 @@ var App = React.createClass({
         <nav className="top-bar" data-topbar role="navigation">
           <ul className="title-area">
             <li className="name">
-              <h1><IndexLink to="/">Home</IndexLink></h1>
+              <h1 className="logo-type"><IndexLink to="/">Highlight</IndexLink></h1>
             </li>
           </ul>
         </nav>

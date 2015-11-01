@@ -86,7 +86,7 @@ var Index = React.createClass({
          <div className="article-grabber">
            <form className="article-grabber-form" onSubmit={this.handleSubmit}>
              <input className="article-grabber-input" type="text" placeholder="article url (e.g http://wikipedia.org/wiki/penguin)" defaultValue={this.props.url} ref="articlesUrl" />
-             <button className="article-grabber-btn" type="submit">+</button>
+             <button className="article-grabber-btn" type="submit"><i className="fa fa-long-arrow-right"></i></button>
            </form>
          </div>
           {
@@ -96,10 +96,10 @@ var Index = React.createClass({
                     <ul className="article-preview-wrapper">
                       <Glance className="glance-view clearfix"/>
                       <li className="article-component">
-                        <h1 className="article-title-preview"><Link to={`/article/${result.objectId}`} className="title-link butts">{result.title}</Link></h1>
+                        <h1 className="article-title-preview"><Link to={`/article/${result.objectId}`} className="title-link">{result.title}</Link></h1>
                       </li>
                       <li className="article-component">
-                        <span className="article-preview-author">{result.author}</span>
+                        <a className="article-permalink" href={result.domain}>{result.domain}</a> <span className="article-preview-author">by {result.author}</span>
                       </li>
                       <li className="article-component">
                         <p className="article-content exceprt" dangerouslySetInnerHTML={{__html: result.excerpt}} />
@@ -114,7 +114,7 @@ var Index = React.createClass({
                           </span>
                         </li>
                         <li className="article-option">
-                          <button className="option-toggle"><i className="fa fa-heart-o"></i></button>
+                          <button className="option-toggle"><i className="fa fa-star"></i></button>
                           <span className="tooltip">
                             <span className="triangle" />
                             <span className="tooltip-body">Favorite</span>
@@ -135,10 +135,10 @@ var Index = React.createClass({
                           </span>
                         </li>
                         <li className="article-option">
-                          <button className="option-toggle"><i className="fa fa-hand-o-right"></i></button>
+                          <button className="option-toggle"><i className="fa fa-bars"></i></button>
                           <span className="tooltip">
                             <span className="triangle" />
-                            <span className="tooltip-body">Share</span>
+                            <span className="tooltip-body">More</span>
                           </span>
                         </li>
                       </ul>

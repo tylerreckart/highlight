@@ -16,11 +16,11 @@ var Article = Backbone.Model.extend({
     return {
       author: '',
       content: '',
-      date_published: '',
+      datePublished: '',
       excerpt: '',
-      lead_image_url: '',
+      leadImageUrl: '',
       url: '',
-      word_count: ''
+      wordCount: ''
     }
   }
 });
