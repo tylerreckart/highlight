@@ -13,6 +13,36 @@ $red: #DA4C56;
   overflow: auto;
 }
 
+.search {
+  position: absolute;
+  top: 7px;
+  left: 135px;
+}
+
+.search-input-label {
+  position: absolute;
+  font-size: 14px;
+  top: 7px;
+  left: 9px;
+  color: #999999;
+}
+
+.search-input {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 27px;
+  font-size: 0.9em;
+  width: 200px;
+  outline: none;
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid #f0f0f0;
+
+  &:focus {
+    border: 1px solid #c0c0c0;
+  }
+}
+
 .body-content {
   max-width: 800px;
   margin: 0 auto;
@@ -53,7 +83,6 @@ $red: #DA4C56;
 
 .nav-option {
   padding-left: 20px;
-  font-size: 14px;
   float: left;
 
   &:first-child {
@@ -67,6 +96,34 @@ $red: #DA4C56;
   font-style: normal;
   font-size: 1.1em;
   line-height: 2.5em;
+}
+
+.nav-option-toggle {
+  cursor: pointer;
+  font-size: 14px;
+  height: 20px;
+  max-width: 165px;
+  background-color: transparent;
+  font-weight: 300;
+  border: 0;
+  outline: 0;
+  color: #222;
+
+  &:hover {
+    color: #166FC3;
+  }
+}
+
+.nav-label {
+  display: none;
+}
+
+.title-options:hover + .nav-label {
+  display: block;
+}
+
+.nav-email {
+  border-bottom: 1px dotted #D6D6D6;
 }
 
 .article-grabber {
@@ -85,6 +142,7 @@ $red: #DA4C56;
   border-top: none;
   border-left: none;
   border-right: none;
+  border-top: 1px solid #f0f0f0;
   border-bottom: 1px solid #f0f0f0;
   border-right: none;
 }
@@ -100,9 +158,9 @@ $red: #DA4C56;
   border-top: none;
   border-left: none;
   border-right: none;
+  border-top: 1px solid #f0f0f0;
   border-bottom: 1px solid #f0f0f0;
   color: #999999;
-  margin-top: -1px;
   z-index: 1000;
   position: absolute;
   right: 0;
@@ -383,6 +441,10 @@ Tooltip(s)
 
 
 */
+.nav-option-toggle:hover + .tooltip {
+  display: block;
+}
+
 .option-toggle:hover + .tooltip {
   display: block;
 }

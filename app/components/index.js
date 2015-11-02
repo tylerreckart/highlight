@@ -44,7 +44,7 @@ var Index = React.createClass({
   handleDestroy(articles, e) {
     e.preventDefault();
 
-    if(confirm("Are you sure?")){
+    if(confirm("Are you sure? This article will be permanently deleted.")){
       var model = this.state.articles.get(articles.objectId);
       model.destroy();
       this.history.replaceState(null, '/');
