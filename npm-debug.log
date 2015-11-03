@@ -1,0 +1,454 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@2.14.1
+3 info using node@v0.12.7
+4 verbose readDependencies loading dependencies from /Users/Tyler/Code/highlight/package.json
+5 verbose install where, deps [ '/Users/Tyler/Code/highlight',
+5 verbose install   [ 'babel-core',
+5 verbose install     'babel-loader',
+5 verbose install     'backbone',
+5 verbose install     'bourbon',
+5 verbose install     'bourbon-neat',
+5 verbose install     'css-loader',
+5 verbose install     'es6-promise',
+5 verbose install     'eslint',
+5 verbose install     'eslint-plugin-react',
+5 verbose install     'file-loader',
+5 verbose install     'filepicker-js',
+5 verbose install     'font-awesome',
+5 verbose install     'foundation-sites',
+5 verbose install     'gulp',
+5 verbose install     'gulp-gh-pages',
+5 verbose install     'gulp-util',
+5 verbose install     'history',
+5 verbose install     'html-webpack-plugin',
+5 verbose install     'jquery',
+5 verbose install     'jquery-param',
+5 verbose install     'modernizr-webpack-plugin',
+5 verbose install     'node-sass',
+5 verbose install     'normalize.css',
+5 verbose install     'open-browser-webpack-plugin',
+5 verbose install     'react',
+5 verbose install     'react-addons-update',
+5 verbose install     'react-dom',
+5 verbose install     'react-hot-loader',
+5 verbose install     'react-router',
+5 verbose install     'resolve-url-loader',
+5 verbose install     'sass-loader',
+5 verbose install     'style-loader',
+5 verbose install     'underscore',
+5 verbose install     'url-loader',
+5 verbose install     'webpack',
+5 verbose install     'webpack-dev-server' ] ]
+6 verbose install where, peers [ '/Users/Tyler/Code/highlight', [] ]
+7 verbose installManyTop reading for lifecycle /Users/Tyler/Code/highlight/package.json
+8 info preinstall @
+9 verbose installManyTop reading scoped package data from /Users/Tyler/Code/highlight/node_modules/babel-core/package.json
+10 verbose installManyTop reading scoped package data from /Users/Tyler/Code/highlight/node_modules/babel-loader/package.json
+11 verbose installManyTop reading scoped package data from /Users/Tyler/Code/highlight/node_modules/backbone/package.json
+12 verbose installManyTop reading scoped package data from /Users/Tyler/Code/highlight/node_modules/bourbon/package.json
+13 verbose installManyTop reading scoped package data from /Users/Tyler/Code/highlight/node_modules/bourbon-neat/package.json
+14 verbose installManyTop reading scoped package data from /Users/Tyler/Code/highlight/node_modules/css-loader/package.json
+15 verbose installManyTop reading scoped package data from /Users/Tyler/Code/highlight/node_modules/es6-promise/package.json
+16 verbose installManyTop reading scoped package data from /Users/Tyler/Code/highlight/node_modules/eslint/package.json
+17 verbose installManyTop reading scoped package data from /Users/Tyler/Code/highlight/node_modules/eslint-plugin-react/package.json
+18 verbose installManyTop reading scoped package data from /Users/Tyler/Code/highlight/node_modules/file-loader/package.json
+19 verbose installManyTop reading scoped package data from /Users/Tyler/Code/highlight/node_modules/filepicker-js/package.json
+20 verbose installManyTop reading scoped package data from /Users/Tyler/Code/highlight/node_modules/font-awesome/package.json
+21 verbose installManyTop reading scoped package data from /Users/Tyler/Code/highlight/node_modules/foundation-sites/package.json
+22 verbose installManyTop reading scoped package data from /Users/Tyler/Code/highlight/node_modules/gulp/package.json
+23 verbose installManyTop reading scoped package data from /Users/Tyler/Code/highlight/node_modules/gulp-gh-pages/package.json
+24 verbose installManyTop reading scoped package data from /Users/Tyler/Code/highlight/node_modules/gulp-util/package.json
+25 verbose installManyTop reading scoped package data from /Users/Tyler/Code/highlight/node_modules/history/package.json
+26 verbose installManyTop reading scoped package data from /Users/Tyler/Code/highlight/node_modules/html-webpack-plugin/package.json
+27 verbose installManyTop reading scoped package data from /Users/Tyler/Code/highlight/node_modules/jquery/package.json
+28 verbose installManyTop reading scoped package data from /Users/Tyler/Code/highlight/node_modules/jquery-param/package.json
+29 verbose installManyTop reading scoped package data from /Users/Tyler/Code/highlight/node_modules/modernizr-webpack-plugin/package.json
+30 verbose installManyTop reading scoped package data from /Users/Tyler/Code/highlight/node_modules/node-sass/package.json
+31 verbose installManyTop reading scoped package data from /Users/Tyler/Code/highlight/node_modules/normalize.css/package.json
+32 verbose installManyTop reading scoped package data from /Users/Tyler/Code/highlight/node_modules/open-browser-webpack-plugin/package.json
+33 verbose installManyTop reading scoped package data from /Users/Tyler/Code/highlight/node_modules/react/package.json
+34 verbose installManyTop reading scoped package data from /Users/Tyler/Code/highlight/node_modules/react-dom/package.json
+35 verbose installManyTop reading scoped package data from /Users/Tyler/Code/highlight/node_modules/react-hot-loader/package.json
+36 verbose installManyTop reading scoped package data from /Users/Tyler/Code/highlight/node_modules/react-router/package.json
+37 verbose installManyTop reading scoped package data from /Users/Tyler/Code/highlight/node_modules/readabilitySAX/package.json
+38 verbose installManyTop reading scoped package data from /Users/Tyler/Code/highlight/node_modules/request/package.json
+39 verbose installManyTop reading scoped package data from /Users/Tyler/Code/highlight/node_modules/resolve-url-loader/package.json
+40 verbose installManyTop reading scoped package data from /Users/Tyler/Code/highlight/node_modules/sass-loader/package.json
+41 verbose installManyTop reading scoped package data from /Users/Tyler/Code/highlight/node_modules/style-loader/package.json
+42 verbose installManyTop reading scoped package data from /Users/Tyler/Code/highlight/node_modules/underscore/package.json
+43 verbose installManyTop reading scoped package data from /Users/Tyler/Code/highlight/node_modules/url-loader/package.json
+44 verbose installManyTop reading scoped package data from /Users/Tyler/Code/highlight/node_modules/webpack/package.json
+45 verbose installManyTop reading scoped package data from /Users/Tyler/Code/highlight/node_modules/webpack-dev-server/package.json
+46 info package.json babel-core@5.8.30 No README data
+47 info package.json foundation-sites@5.5.3 No license field.
+48 info package.json jquery@2.1.4 No license field.
+49 info package.json readabilitySAX@1.6.1 license should be a valid SPDX license expression
+50 verbose readDependencies loading dependencies from /Users/Tyler/Code/highlight/package.json
+51 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/babel-core/package.json
+52 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/babel-loader/package.json
+53 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/backbone/package.json
+54 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/bourbon/package.json
+55 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/bourbon-neat/package.json
+56 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/css-loader/package.json
+57 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/es6-promise/package.json
+58 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/eslint/package.json
+59 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/eslint-plugin-react/package.json
+60 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/file-loader/package.json
+61 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/filepicker-js/package.json
+62 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/font-awesome/package.json
+63 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/foundation-sites/package.json
+64 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/gulp/package.json
+65 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/gulp-gh-pages/package.json
+66 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/gulp-util/package.json
+67 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/history/package.json
+68 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/html-webpack-plugin/package.json
+69 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/jquery/package.json
+70 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/jquery-param/package.json
+71 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/modernizr-webpack-plugin/package.json
+72 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/node-sass/package.json
+73 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/normalize.css/package.json
+74 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/open-browser-webpack-plugin/package.json
+75 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/react/package.json
+76 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/react-dom/package.json
+77 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/react-hot-loader/package.json
+78 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/react-router/package.json
+79 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/readabilitySAX/package.json
+80 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/request/package.json
+81 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/resolve-url-loader/package.json
+82 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/sass-loader/package.json
+83 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/style-loader/package.json
+84 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/underscore/package.json
+85 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/url-loader/package.json
+86 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/webpack/package.json
+87 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/webpack-dev-server/package.json
+88 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/.bin/eslint/package.json
+89 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/.bin/gulp/package.json
+90 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/.bin/node-sass/package.json
+91 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/.bin/readability/package.json
+92 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/.bin/webpack/package.json
+93 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/.bin/webpack-dev-server/package.json
+94 verbose already installed skipping open-browser-webpack-plugin@0.0.1 /Users/Tyler/Code/highlight
+95 verbose already installed skipping react@^0.14.0 /Users/Tyler/Code/highlight
+96 silly cache add args [ 'react-addons-update@^0.14.0', null ]
+97 verbose cache add spec react-addons-update@^0.14.0
+98 silly cache add parsed spec { raw: 'react-addons-update@^0.14.0',
+98 silly cache add   scope: null,
+98 silly cache add   name: 'react-addons-update',
+98 silly cache add   rawSpec: '^0.14.0',
+98 silly cache add   spec: '>=0.14.0 <0.15.0',
+98 silly cache add   type: 'range' }
+99 silly addNamed react-addons-update@>=0.14.0 <0.15.0
+100 verbose addNamed ">=0.14.0 <0.15.0" is a valid semver range for react-addons-update
+101 silly addNameRange { name: 'react-addons-update',
+101 silly addNameRange   range: '>=0.14.0 <0.15.0',
+101 silly addNameRange   hasData: false }
+102 silly mapToRegistry name react-addons-update
+103 silly mapToRegistry using default registry
+104 silly mapToRegistry registry https://registry.npmjs.org/
+105 silly mapToRegistry uri https://registry.npmjs.org/react-addons-update
+106 verbose addNameRange registry:https://registry.npmjs.org/react-addons-update not in flight; fetching
+107 verbose already installed skipping react-dom@^0.14.0 /Users/Tyler/Code/highlight
+108 verbose already installed skipping react-hot-loader@^1.3.0 /Users/Tyler/Code/highlight
+109 verbose already installed skipping react-router@^1.0.0-rc3 /Users/Tyler/Code/highlight
+110 verbose already installed skipping resolve-url-loader@^1.3.0 /Users/Tyler/Code/highlight
+111 verbose already installed skipping sass-loader@^3.0.0 /Users/Tyler/Code/highlight
+112 verbose already installed skipping style-loader@^0.13.0 /Users/Tyler/Code/highlight
+113 verbose already installed skipping underscore@^1.8.3 /Users/Tyler/Code/highlight
+114 verbose already installed skipping url-loader@^0.5.6 /Users/Tyler/Code/highlight
+115 verbose already installed skipping webpack@^1.12.2 /Users/Tyler/Code/highlight
+116 verbose already installed skipping webpack-dev-server@^1.12.1 /Users/Tyler/Code/highlight
+117 verbose already installed skipping babel-core@^5.8.25 /Users/Tyler/Code/highlight
+118 verbose request uri https://registry.npmjs.org/react-addons-update
+119 verbose request no auth needed
+120 info attempt registry request try #1 at 10:27:09 AM
+121 verbose request using bearer token for auth
+122 verbose request id 4d4d39ae44ff3042
+123 http request GET https://registry.npmjs.org/react-addons-update
+124 verbose already installed skipping babel-loader@^5.3.2 /Users/Tyler/Code/highlight
+125 verbose already installed skipping backbone@^1.2.3 /Users/Tyler/Code/highlight
+126 verbose already installed skipping bourbon@^4.2.6 /Users/Tyler/Code/highlight
+127 verbose already installed skipping bourbon-neat@^1.7.2 /Users/Tyler/Code/highlight
+128 verbose already installed skipping css-loader@^0.20.2 /Users/Tyler/Code/highlight
+129 verbose already installed skipping es6-promise@^3.0.2 /Users/Tyler/Code/highlight
+130 verbose already installed skipping eslint@^1.7.3 /Users/Tyler/Code/highlight
+131 verbose already installed skipping eslint-plugin-react@^3.6.3 /Users/Tyler/Code/highlight
+132 verbose already installed skipping file-loader@^0.8.4 /Users/Tyler/Code/highlight
+133 verbose already installed skipping filepicker-js@^2.1.3 /Users/Tyler/Code/highlight
+134 verbose already installed skipping font-awesome@^4.4.0 /Users/Tyler/Code/highlight
+135 verbose already installed skipping foundation-sites@^5.5.3 /Users/Tyler/Code/highlight
+136 verbose already installed skipping gulp@^3.8.11 /Users/Tyler/Code/highlight
+137 verbose already installed skipping gulp-gh-pages@^0.5.2 /Users/Tyler/Code/highlight
+138 verbose already installed skipping gulp-util@^3.0.6 /Users/Tyler/Code/highlight
+139 verbose already installed skipping history@^1.12.5 /Users/Tyler/Code/highlight
+140 verbose already installed skipping html-webpack-plugin@^1.6.2 /Users/Tyler/Code/highlight
+141 verbose already installed skipping jquery@^2.1.4 /Users/Tyler/Code/highlight
+142 verbose already installed skipping jquery-param@^0.2.0 /Users/Tyler/Code/highlight
+143 verbose already installed skipping modernizr-webpack-plugin@^1.0.1 /Users/Tyler/Code/highlight
+144 verbose already installed skipping node-sass@^3.3.3 /Users/Tyler/Code/highlight
+145 verbose already installed skipping normalize.css@^3.0.3 /Users/Tyler/Code/highlight
+146 http 200 https://registry.npmjs.org/react-addons-update
+147 silly get cb [ 200,
+147 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+147 silly get     etag: '"1U5I0A9MC0CZFW79Q0J43CENR"',
+147 silly get     'content-type': 'application/json',
+147 silly get     'cache-control': 'max-age=60',
+147 silly get     'content-length': '7141',
+147 silly get     'accept-ranges': 'bytes',
+147 silly get     date: 'Tue, 03 Nov 2015 15:27:10 GMT',
+147 silly get     via: '1.1 varnish',
+147 silly get     connection: 'keep-alive',
+147 silly get     'x-served-by': 'cache-iad2137-IAD',
+147 silly get     'x-cache': 'MISS',
+147 silly get     'x-cache-hits': '0',
+147 silly get     'x-timer': 'S1446564430.012688,VS0,VE326',
+147 silly get     vary: 'Accept' } ]
+148 verbose get saving react-addons-update to /Users/Tyler/.npm/cache/registry.npmjs.org/react-addons-update/.cache.json
+149 silly addNameRange number 2 { name: 'react-addons-update',
+149 silly addNameRange   range: '>=0.14.0 <0.15.0',
+149 silly addNameRange   hasData: true }
+150 silly addNameRange versions [ 'react-addons-update',
+150 silly addNameRange   [ '0.14.0-beta1',
+150 silly addNameRange     '0.14.0-beta2',
+150 silly addNameRange     '0.14.0-beta3',
+150 silly addNameRange     '0.14.0-rc1',
+150 silly addNameRange     '0.14.0',
+150 silly addNameRange     '0.14.1',
+150 silly addNameRange     '0.14.2' ] ]
+151 silly addNamed react-addons-update@0.14.2
+152 verbose addNamed "0.14.2" is a plain semver version for react-addons-update
+153 silly mapToRegistry name react-addons-update
+154 silly mapToRegistry using default registry
+155 silly mapToRegistry registry https://registry.npmjs.org/
+156 silly mapToRegistry uri https://registry.npmjs.org/react-addons-update
+157 verbose addRemoteTarball https://registry.npmjs.org/react-addons-update/-/react-addons-update-0.14.2.tgz not in flight; adding
+158 verbose addRemoteTarball [ 'https://registry.npmjs.org/react-addons-update/-/react-addons-update-0.14.2.tgz',
+158 verbose addRemoteTarball   '9bad39269b286381a7c05738382cb5a8ad97b67e' ]
+159 info retry fetch attempt 1 at 10:27:09 AM
+160 info attempt registry request try #1 at 10:27:09 AM
+161 http fetch GET https://registry.npmjs.org/react-addons-update/-/react-addons-update-0.14.2.tgz
+162 verbose request using bearer token for auth
+163 http fetch 200 https://registry.npmjs.org/react-addons-update/-/react-addons-update-0.14.2.tgz
+164 silly fetchAndShaCheck shasum 9bad39269b286381a7c05738382cb5a8ad97b67e
+165 verbose addTmpTarball /var/folders/lz/dsvfgb595ksf6tm35wf0bynm0000gn/T/npm-66338-8aa3cb7f/registry.npmjs.org/react-addons-update/-/react-addons-update-0.14.2.tgz not in flight; adding
+166 verbose addTmpTarball already have metadata; skipping unpack for react-addons-update@0.14.2
+167 silly cache afterAdd react-addons-update@0.14.2
+168 verbose afterAdd /Users/Tyler/.npm/cache/react-addons-update/0.14.2/package/package.json not in flight; writing
+169 verbose afterAdd /Users/Tyler/.npm/cache/react-addons-update/0.14.2/package/package.json written
+170 silly install resolved [ { name: 'react-addons-update',
+170 silly install resolved     version: '0.14.2',
+170 silly install resolved     main: 'index.js',
+170 silly install resolved     license: 'BSD-3-Clause',
+170 silly install resolved     peerDependencies: { react: '^0.14.2' },
+170 silly install resolved     description: 'This package provides the React updates add-on. See http://facebook.github.io/react/docs/addons.html for more information.',
+170 silly install resolved     _id: 'react-addons-update@0.14.2',
+170 silly install resolved     _shasum: '9bad39269b286381a7c05738382cb5a8ad97b67e',
+170 silly install resolved     _resolved: 'https://registry.npmjs.org/react-addons-update/-/react-addons-update-0.14.2.tgz',
+170 silly install resolved     _from: 'react-addons-update@>=0.14.0 <0.15.0',
+170 silly install resolved     scripts: {},
+170 silly install resolved     _npmVersion: '2.14.9',
+170 silly install resolved     _nodeVersion: '4.2.0',
+170 silly install resolved     _npmUser: { name: 'zpao', email: 'paul@oshannessy.com' },
+170 silly install resolved     maintainers: [ [Object], [Object] ],
+170 silly install resolved     dist:
+170 silly install resolved      { shasum: '9bad39269b286381a7c05738382cb5a8ad97b67e',
+170 silly install resolved        tarball: 'http://registry.npmjs.org/react-addons-update/-/react-addons-update-0.14.2.tgz' },
+170 silly install resolved     directories: {} } ]
+171 info install react-addons-update@0.14.2 into /Users/Tyler/Code/highlight
+172 info installOne react-addons-update@0.14.2
+173 verbose installOne of react-addons-update to /Users/Tyler/Code/highlight not in flight; installing
+174 verbose lock using /Users/Tyler/.npm/cache/_locks/react-addons-update-390b5c1ce44b62bd.lock for /Users/Tyler/Code/highlight/node_modules/react-addons-update
+175 silly install write writing react-addons-update 0.14.2 to /Users/Tyler/Code/highlight/node_modules/react-addons-update
+176 verbose unbuild node_modules/react-addons-update
+177 silly gentlyRm /Users/Tyler/Code/highlight/node_modules/react-addons-update is being purged from base /Users/Tyler/Code/highlight
+178 verbose gentlyRm don't care about contents; nuking /Users/Tyler/Code/highlight/node_modules/react-addons-update
+179 verbose tar unpack /Users/Tyler/.npm/cache/react-addons-update/0.14.2/package.tgz
+180 verbose tar unpacking to /Users/Tyler/Code/highlight/node_modules/react-addons-update
+181 silly gentlyRm /Users/Tyler/Code/highlight/node_modules/react-addons-update is being purged
+182 verbose gentlyRm don't care about contents; nuking /Users/Tyler/Code/highlight/node_modules/react-addons-update
+183 silly gunzTarPerm modes [ '755', '644' ]
+184 silly gunzTarPerm extractEntry package.json
+185 silly gunzTarPerm extractEntry README.md
+186 silly gunzTarPerm extractEntry LICENSE
+187 silly gunzTarPerm extractEntry index.js
+188 silly gunzTarPerm extractEntry PATENTS
+189 verbose write writing to /Users/Tyler/Code/highlight/node_modules/react-addons-update/package.json
+190 info preinstall react-addons-update@0.14.2
+191 verbose readDependencies loading dependencies from /Users/Tyler/Code/highlight/node_modules/react-addons-update/package.json
+192 silly prepareForInstallMany adding react@^0.14.2 from react-addons-update peerDependencies
+193 warn peerDependencies The peer dependency react@^0.14.2 included from react-addons-update will no
+194 warn peerDependencies longer be automatically installed to fulfill the peerDependency
+195 warn peerDependencies in npm 3+. Your application will need to depend on it explicitly.
+196 verbose readDependencies loading dependencies from /Users/Tyler/Code/highlight/node_modules/react-addons-update/package.json
+197 silly install resolved []
+198 verbose about to build /Users/Tyler/Code/highlight/node_modules/react-addons-update
+199 info build /Users/Tyler/Code/highlight/node_modules/react-addons-update
+200 info linkStuff react-addons-update@0.14.2
+201 silly linkStuff react-addons-update@0.14.2 has /Users/Tyler/Code/highlight/node_modules as its parent node_modules
+202 verbose linkBins react-addons-update@0.14.2
+203 verbose linkMans react-addons-update@0.14.2
+204 verbose rebuildBundles react-addons-update@0.14.2
+205 info install react-addons-update@0.14.2
+206 info postinstall react-addons-update@0.14.2
+207 verbose readDependencies loading dependencies from /Users/Tyler/Code/highlight/package.json
+208 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/babel-core/package.json
+209 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/babel-loader/package.json
+210 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/backbone/package.json
+211 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/bourbon/package.json
+212 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/bourbon-neat/package.json
+213 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/css-loader/package.json
+214 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/es6-promise/package.json
+215 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/eslint/package.json
+216 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/eslint-plugin-react/package.json
+217 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/file-loader/package.json
+218 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/filepicker-js/package.json
+219 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/font-awesome/package.json
+220 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/foundation-sites/package.json
+221 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/gulp/package.json
+222 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/gulp-gh-pages/package.json
+223 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/gulp-util/package.json
+224 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/history/package.json
+225 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/html-webpack-plugin/package.json
+226 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/jquery/package.json
+227 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/jquery-param/package.json
+228 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/modernizr-webpack-plugin/package.json
+229 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/node-sass/package.json
+230 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/normalize.css/package.json
+231 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/open-browser-webpack-plugin/package.json
+232 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/react/package.json
+233 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/react-addons-update/package.json
+234 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/react-dom/package.json
+235 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/react-hot-loader/package.json
+236 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/react-router/package.json
+237 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/readabilitySAX/package.json
+238 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/request/package.json
+239 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/resolve-url-loader/package.json
+240 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/sass-loader/package.json
+241 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/style-loader/package.json
+242 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/underscore/package.json
+243 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/url-loader/package.json
+244 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/webpack/package.json
+245 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/webpack-dev-server/package.json
+246 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/.bin/eslint/package.json
+247 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/.bin/gulp/package.json
+248 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/.bin/node-sass/package.json
+249 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/.bin/readability/package.json
+250 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/.bin/webpack/package.json
+251 verbose targetResolver reading package data from /Users/Tyler/Code/highlight/node_modules/.bin/webpack-dev-server/package.json
+252 verbose already installed skipping react@^0.14.2 /Users/Tyler/Code/highlight
+253 silly install resolved []
+254 verbose unlock done using /Users/Tyler/.npm/cache/_locks/react-addons-update-390b5c1ce44b62bd.lock for /Users/Tyler/Code/highlight/node_modules/react-addons-update
+255 info build /Users/Tyler/Code/highlight
+256 info linkStuff @
+257 silly linkStuff @ has /Users/Tyler/Code as its parent node_modules
+258 verbose linkBins @
+259 verbose linkMans @
+260 verbose rebuildBundles @
+261 verbose rebuildBundles [ '.DS_Store',
+261 verbose rebuildBundles   '.bin',
+261 verbose rebuildBundles   'babel-core',
+261 verbose rebuildBundles   'babel-loader',
+261 verbose rebuildBundles   'backbone',
+261 verbose rebuildBundles   'bourbon',
+261 verbose rebuildBundles   'bourbon-neat',
+261 verbose rebuildBundles   'css-loader',
+261 verbose rebuildBundles   'es6-promise',
+261 verbose rebuildBundles   'eslint',
+261 verbose rebuildBundles   'eslint-plugin-react',
+261 verbose rebuildBundles   'file-loader',
+261 verbose rebuildBundles   'filepicker-js',
+261 verbose rebuildBundles   'font-awesome',
+261 verbose rebuildBundles   'foundation-sites',
+261 verbose rebuildBundles   'gulp',
+261 verbose rebuildBundles   'gulp-gh-pages',
+261 verbose rebuildBundles   'gulp-util',
+261 verbose rebuildBundles   'history',
+261 verbose rebuildBundles   'html-webpack-plugin',
+261 verbose rebuildBundles   'jquery',
+261 verbose rebuildBundles   'jquery-param',
+261 verbose rebuildBundles   'modernizr-webpack-plugin',
+261 verbose rebuildBundles   'node-sass',
+261 verbose rebuildBundles   'normalize.css',
+261 verbose rebuildBundles   'open-browser-webpack-plugin',
+261 verbose rebuildBundles   'react',
+261 verbose rebuildBundles   'react-addons-update',
+261 verbose rebuildBundles   'react-dom',
+261 verbose rebuildBundles   'react-hot-loader',
+261 verbose rebuildBundles   'react-router',
+261 verbose rebuildBundles   'readabilitySAX',
+261 verbose rebuildBundles   'request',
+261 verbose rebuildBundles   'resolve-url-loader',
+261 verbose rebuildBundles   'sass-loader',
+261 verbose rebuildBundles   'style-loader',
+261 verbose rebuildBundles   'underscore',
+261 verbose rebuildBundles   'url-loader',
+261 verbose rebuildBundles   'webpack',
+261 verbose rebuildBundles   'webpack-dev-server' ]
+262 verbose rebuild bundle /Users/Tyler/Code/highlight/node_modules/readabilitySAX
+263 info build /Users/Tyler/Code/highlight/node_modules/readabilitySAX
+264 info preinstall readabilitySAX@1.6.1
+265 info linkStuff readabilitySAX@1.6.1
+266 silly linkStuff readabilitySAX@1.6.1 has /Users/Tyler/Code/highlight/node_modules as its parent node_modules
+267 verbose linkBins readabilitySAX@1.6.1
+268 verbose link bins [ { readability: 'node/CLI.js' },
+268 verbose link bins   '/Users/Tyler/Code/highlight/node_modules/.bin',
+268 verbose link bins   false ]
+269 verbose linkMans readabilitySAX@1.6.1
+270 verbose rebuildBundles readabilitySAX@1.6.1
+271 verbose rebuildBundles [ 'entities', 'htmlparser2', 'minreq', 'readable-stream' ]
+272 silly gentlyRm /Users/Tyler/Code/highlight/node_modules/.bin/readability is being purged
+273 verbose gentlyRm don't care about contents; nuking /Users/Tyler/Code/highlight/node_modules/.bin/readability
+274 silly vacuum-fs purging /Users/Tyler/Code/highlight/node_modules/.bin/readability
+275 silly vacuum-fs quitting because other entries in /Users/Tyler/Code/highlight/node_modules/.bin
+276 info install readabilitySAX@1.6.1
+277 info postinstall readabilitySAX@1.6.1
+278 verbose rebuild bundle /Users/Tyler/Code/highlight/node_modules/request
+279 info build /Users/Tyler/Code/highlight/node_modules/request
+280 info preinstall request@2.50.0
+281 info linkStuff request@2.50.0
+282 silly linkStuff request@2.50.0 has /Users/Tyler/Code/highlight/node_modules as its parent node_modules
+283 verbose linkBins request@2.50.0
+284 verbose linkMans request@2.50.0
+285 verbose rebuildBundles request@2.50.0
+286 verbose rebuildBundles [ '.bin',
+286 verbose rebuildBundles   'aws-sign2',
+286 verbose rebuildBundles   'bl',
+286 verbose rebuildBundles   'caseless',
+286 verbose rebuildBundles   'combined-stream',
+286 verbose rebuildBundles   'forever-agent',
+286 verbose rebuildBundles   'form-data',
+286 verbose rebuildBundles   'hawk',
+286 verbose rebuildBundles   'http-signature',
+286 verbose rebuildBundles   'json-stringify-safe',
+286 verbose rebuildBundles   'mime-types',
+286 verbose rebuildBundles   'node-uuid',
+286 verbose rebuildBundles   'oauth-sign',
+286 verbose rebuildBundles   'qs',
+286 verbose rebuildBundles   'stringstream',
+286 verbose rebuildBundles   'tough-cookie',
+286 verbose rebuildBundles   'tunnel-agent' ]
+287 info install request@2.50.0
+288 info postinstall request@2.50.0
+289 info install @
+290 info postinstall @
+291 info prepublish @
+292 verbose validateInstall loading /Users/Tyler/Code/highlight/package.json for validation
+293 verbose stack Error: The package react@0.14.0 does not satisfy its siblings' peerDependencies requirements!
+293 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:125:32
+293 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:268:7
+293 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:142:5
+293 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+293 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+293 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+293 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+293 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+293 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+293 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+294 verbose cwd /Users/Tyler/Code/highlight
+295 error Darwin 15.0.0
+296 error argv "node" "/usr/local/bin/npm" "install"
+297 error node v0.12.7
+298 error npm  v2.14.1
+299 error code EPEERINVALID
+300 error peerinvalid The package react@0.14.0 does not satisfy its siblings' peerDependencies requirements!
+301 verbose exit [ 1, true ]
