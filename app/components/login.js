@@ -39,7 +39,7 @@ const Login = React.createClass({
     return (
       <form onSubmit={this.handleSubmit}>
         <h1>Login</h1>
-        <input ref="emai" placeholder="email" />
+        <input ref="email" placeholder="email" />
         <input type="password" ref="password" placeholder="password" />
         <button type="submit">Login</button>
         {this.state.error && (

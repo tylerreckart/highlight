@@ -1,7 +1,14 @@
 import React from 'react';
+import store from '../store';
 import { Link, IndexLink } from 'react-router';
 
 const Header = React.createClass({
+  handleLogOut(e) {
+    e.preventDefault();
+
+    store.invalidateSession();
+  },
+  
   render() {
     return (
       <div>
@@ -42,6 +49,9 @@ const Header = React.createClass({
                 <span className="triangle" />
                 <span className="tooltip-body">Account settings &amp; more</span>
               </span>
+            </li>
+            <li className="nav-option">
+              <button className="logout-btn" onClick={this.handleLogOut}>Log Out</button>
             </li>
           </ul>
         </nav>

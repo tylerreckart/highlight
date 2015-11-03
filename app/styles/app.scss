@@ -598,6 +598,17 @@ ShowArticle component
     max-width: 800px;
     padding: 0;
   }
+
+  & a {
+    text-decoration: underline;
+    font-family: "ff-tisa-web-pro";
+    font-style: italic;
+    color: #2B8FDD;
+
+    &:hover {
+      color: #166FC3;
+    }
+  }
 }
 
 .article-title {
