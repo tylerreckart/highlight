@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Header from './header';
+import Footer from './footer';
 
 var App = React.createClass({
   propTypes: {
@@ -14,6 +15,7 @@ var App = React.createClass({
         <div className="body-content">
           {this.props.children}
         </div>
+        <Footer />
       </div>
     );
   }

@@ -6,6 +6,8 @@ import Article from '../models/article';
 import ArticlesCollection from '../models/articles-collection';
 
 import Glance from './glance';
+import Toolbelt from './toolbelt';
+import Preview from './article-preview';
 
 import $ from 'jquery';
 
@@ -20,7 +22,7 @@ var Index = React.createClass({
 
   componentWillMount(){
     let articles = new ArticlesCollection;
-    articles.fetch().then(() => this.setState({articles: articles}))
+    articles.fetch().then(() => this.setState({articles: articles}));
   },
 
   handleEdit(){
@@ -74,10 +76,6 @@ var Index = React.createClass({
     });
   },
 
-  toggleVisibility() {
-    $('.glance').toggle();
-  },
-
   render() {
     let articles = (this.state.articles && this.state.articles.toJSON()) || [];
     let content;
@@ -105,43 +103,17 @@ var Index = React.createClass({
                         <p className="article-content exceprt" dangerouslySetInnerHTML={{__html: result.excerpt}} />
                       </li>
 
-                      <ul className="article-options">
-                        <li className="article-option">
-                          <button className="option-toggle" onClick={this.toggleVisibility.bind(this, result)}><i className="fa fa-eye"></i></button>
-                          <span className="tooltip">
-                            <span className="triangle" />
-                            <span className="tooltip-body">Glance</span>
-                          </span>
-                        </li>
-                        <li className="article-option">
-                          <button className="option-toggle"><i className="fa fa-star"></i></button>
-                          <span className="tooltip">
-                            <span className="triangle" />
-                            <span className="tooltip-body">Favorite</span>
-                          </span>
-                        </li>
-                        <li className="article-option">
-                          <button className="option-toggle"><i className="fa fa-sticky-note-o"></i></button>
-                          <span className="tooltip">
-                            <span className="triangle" />
-                            <span className="tooltip-body">Archive</span>
-                          </span>
-                        </li>
-                        <li className="article-option">
-                          <button className="option-toggle" onClick={this.handleDestroy.bind(this, result)}><i className="fa fa-trash-o"></i></button>
-                          <span className="tooltip">
-                            <span className="triangle" />
-                            <span className="tooltip-body">Delete</span>
-                          </span>
-                        </li>
-                        <li className="article-option">
-                          <button className="option-toggle"><i className="fa fa-bars"></i></button>
-                          <span className="tooltip">
-                            <span className="triangle" />
-                            <span className="tooltip-body">More</span>
-                          </span>
-                        </li>
-                      </ul>
+                      <li className="tag-component">
+                        <ul className="tags-list">
+                          <li className="tag"><span className="octothorpe">&#35;</span> example</li>
+                          <li className="tag"><span className="octothorpe">&#35;</span> example</li>
+                          <li className="tag"><span className="octothorpe">&#35;</span> example</li>
+                        </ul>
+                      </li>
+
+                      <li className="article-component">
+                        <Toolbelt />
+                      </li>
 
                     </ul>
                   </div>
