@@ -73,4 +73,4 @@ const Header = React.createClass({
   }
 });
 
-export default Header;
+export default HeaderNotAuth;

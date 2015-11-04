@@ -15,7 +15,6 @@ var App = React.createClass({
         <div className="body-content">
           {this.props.children}
         </div>
-        <Footer />
       </div>
     );
   }

@@ -63,11 +63,7 @@ const Glance = React.createClass({
   render() {
     return (
       <div className="glance clearfix">
-        <p className="glance-content">Simulation is a great way to design a product for users who don’t share the same context as you do. This is what Facebook aims to drill through to its staff by slowing down the site for one hour on Tuesdays.
-
-Through the initiative—dubbed “2G Tuesdays”—the company hopes its staff will better understand what its like to access the platform via a 2G connection, a reality for many of its users living in the developing world. In Africa, Facebook has over 120 million active users, 57% of which access the platform using a feature phone with a 2G connection.
-
-“They’re going to see the places that we need to improve our product, but they’re also going to see the places where we have made a lot of progress,” said Tom Alison, Facebook’s engineering director.</p>
+        <p className="glance-content">hello</p>
         <div className="reader">
           <div className="word-display" />
         </div>

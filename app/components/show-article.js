@@ -30,20 +30,36 @@ const ShowArticle = React.createClass({
 
   render() {
     let article = (this.state.article && this.state.article.toJSON()) || {};
+
+    let scrollEnd = $('body').height() - $(window).height();
+    let scrollPos = $(window).scrollTop();
+    let updateScroll = function() {
+      $('progress').prop('value', (scrollPos / scrollEnd));
+    }
+
+    //update progress
+    $(document).ready(updateScroll);
+    $(window).resize(updateScroll);
+    $(window).scroll(updateScroll);
+
     let content;
-    console.log(article.content);
+
     content = (
-      <ul className="article-wrapper">
-        <li className="article-component"><h1 className="article-title">{article.title}</h1></li>
-        <ul className="article-meta">
-          <li className="article-meta-component"><h3 className="article-link"><a className="external-link" href={article.url} target="_blank">{article.domain}</a></h3></li>
-          <li className="article-meta-component">{article.author}</li>
-          <li className="article-meta-component">{article.datePublished}</li>
-        </ul>
-        <li className="article-component"><div className="article-content" dangerouslySetInnerHTML={{ __html: article.content}}/></li>
-        <li className="article-component"><p className="article-word-count">{article.wordCount}</p></li>
+      <div>
+        <ul className="article-wrapper">
+          <li className="article-component"><h1 className="article-title">{article.title}</h1></li>
+          <li className="article-component"><img className="lead-img" src={article.leadImgUrl} alt="" /></li>
+          <ul className="article-meta">
+            <li className="article-meta-component"><h3 className="article-link"><a className="external-link" href={article.url} target="_blank">{article.domain}</a></h3></li>
+            <li className="article-meta-component">{article.author}</li>
+            <li className="article-meta-component">{article.datePublished}</li>
+          </ul>
+          <li className="article-component"><div className="article-content" dangerouslySetInnerHTML={{ __html: article.content}}/></li>
+          <li className="article-component"><p className="article-word-count">{article.wordCount}</p></li>
       </ul>
+      </div>
     );
+
     return content;
   }
 });

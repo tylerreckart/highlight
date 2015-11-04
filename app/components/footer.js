@@ -5,7 +5,7 @@ const Footer = React.createClass({
   render() {
     return (
       <div>
-        <nav className="top-bar" data-topbar role="navigation">
+        <nav className="bottom-bar" role="navigation">
           <ul className="title-area">
             <li className="name">
               <span className="copy">&#169; Penguin Made. All rights reserved</span>

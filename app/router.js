@@ -11,6 +11,8 @@ import Profile from './components/profile';
 
 import store from './store';
 
+import $ from 'jquery';
+
 function requireAuth(nextState, replaceState) {
   if ( ! store.getSession().isAuthenticated) {
     replaceState({ nextPathname: nextState.location.pathname}, '/login');
@@ -29,11 +31,10 @@ ReactDOM.render((
       <IndexRoute component={Index} onEnter={requireAuth} />
 
       <Route path="article/:id" component={ShowArticle} onEnter={requireAuth} />
+      <Route path="profile" component={Profile} onEnter={requireAuth} />
 
       <Route path="login" component={Login} onEnter={requireNotAuth} />
       <Route path="signup" component={SignUp} onEnter={requireNotAuth} />
-
-      <Route path="profile" component={Profile} onEnter={requireNotAuth} />
     </Route>
   </Router>
 ), document.getElementById('application'));

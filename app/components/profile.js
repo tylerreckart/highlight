@@ -34,19 +34,6 @@ const Profile = React.createClass({
     });
   },
 
-  handleUploadPhoto(e) {
-    e.preventDefault();
-    filepicker.pick(
-      (Blob) => {
-        this.setState({
-          user: update(this.state.user, {
-            avatar: {$set: Blob}
-          })
-        });
-      }
-    );
-  },
-
   handleSubmit(e) {
     e.preventDefault();
     store.saveUser(this.state.user);
@@ -59,17 +46,15 @@ const Profile = React.createClass({
     if(this.state.isEditing) {
       return (
         <form onSubmit={this.handleSubmit}>
-          <input value={user.name} onChange={this.handleName} />
-          {user.avatar && <div><img src={user.avatar.url} alt="Profile picture" /></div>}
-          <button onClick={this.handleUploadPhoto}>Upload Photo</button>
+          <input value={user.username} onChange={this.handleName} />
+          <input type="password" value={user.password} onChange={this.handlePassword} />
           <button type="submit">Save</button>
         </form>
       );
     } else {
       return (
         <div>
-          <h1>{user.name}</h1>
-          {user.avatar && <div><img src={user.avatar.url} alt="Profile picture" /></div>}
+          <h1>{user.username}</h1>
           <button onClick={this.handleEdit}>Edit</button>
         </div>
       );

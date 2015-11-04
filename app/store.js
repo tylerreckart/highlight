@@ -43,7 +43,7 @@ const Store = _.extend({}, Backbone.Events, {
   },
 
   destroyArticle(article) {
-    return aticles.get(article.objectId).destroy();
+    return articles.get(article.objectId).destroy();
   },
 
   invalidateSession() {

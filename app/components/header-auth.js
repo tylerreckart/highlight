@@ -4,7 +4,7 @@ import store from '../store';
 import update from 'react-addons-update';
 import { Link, IndexLink } from 'react-router';
 
-const Header = React.createClass({
+const HeaderAuth = React.createClass({
   mixins: [BackboneMixin],
   
   getModels() {
@@ -73,4 +73,4 @@ const Header = React.createClass({
   }
 });
 
-export default Header;
+export default HeaderAuth;

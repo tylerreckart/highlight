@@ -9,7 +9,7 @@ var Article = Backbone.Model.extend({
     var base = _.result(this, 'urlRoot');
     if (this.isNew()) return base;
     var id = this.get(this.idAttribute);
-    return base.replace(/[^\/]$/, '$&/') + encodeURIComponent(id);
+    return base.replace(/[^\/]$/, '$&/') + encodeURIComponent(id) + '?include=creator';
   },
 
   defaults() {
@@ -20,7 +20,34 @@ var Article = Backbone.Model.extend({
       excerpt: '',
       leadImageUrl: '',
       url: '',
-      wordCount: ''
+      wordCount: '',
+      creator: {}
+    };
+  },
+
+  toJSON(options) {
+    if(options) {
+      return _.extend({}, this.attributes, {
+        creator: {
+          "__type": "Pointer",
+          "className": "_User",
+          "objectId": this.get('creator').objectId
+        }
+      });
+    } else {
+      return _.clone(this.attributes);
+    }
+  },
+
+  save() {
+    let currentUser = store.getSession().currentUser;
+    if(currentUser) {
+      if(this.isNew()) {
+        this.set('creator', currentUser);
+      }
+      Backbone.Model.prototype.save.apply(this, arguments);
+    } else {
+      return new Promise((_, reject) => reject("Invalid session"));
     }
   }
 });
