@@ -1,8 +1,10 @@
 import React from 'react';
+import store from '../store';
 import { Link, IndexLink } from 'react-router';
 
 import Glance from './glance';
 import PopOutMenu from './pop-out-menu';
+import moment from 'moment';
 
 const Preview = React.createClass({
   getInitialState() {
@@ -33,17 +35,32 @@ const Preview = React.createClass({
   },
 
   render() {
+    let wordCount = this.props.result.wordCount;
+    let minutes = Math.floor(wordCount / 275);
+    if(minutes === 0) minutes = 1;
+    
+    function readingTime() {
+      if(minutes === 1) {
+        return minutes + ' minute read';
+      } else if(minutes > 1) {
+        return minutes + ' minutes read';
+      }
+    }
+
+    let author = 'by ' + this.props.result.author;
+    let datePublished = 'on ' + moment(this.props.result.datePublished).format("MMM Do YYYY");
+
     return (
       <div className="articles-wrapper">
         <ul className="article-preview-wrapper">
 
-          { this.state.glance ? <Glance className="glance-view clearfix" /> : null }
+          { this.state.glance ? <Glance className="glance-view clearfix" result={this.props.result} /> : null }
 
           <li className="article-component">
             <h1 className="article-title-preview"><Link to={`/article/${this.props.result.objectId}`} className="title-link">{this.props.result.title}</Link></h1>
           </li>
           <li className="article-component">
-            <a className="article-permalink" href={this.props.result.domain}>{this.props.result.domain}</a> <span className="article-preview-author">by {this.props.result.author}</span>
+            <a className="article-permalink" href={this.props.result.domain}>{this.props.result.domain}</a> <span className="article-preview-author">by {this.props.result.author}</span> <span className="bullet">&#x2022;</span> <span className="article-preview-reading-time">{readingTime()}</span>
           </li>
           <li className="article-component">
             <p className="article-content exceprt" dangerouslySetInnerHTML={{__html: this.props.result.excerpt}} />

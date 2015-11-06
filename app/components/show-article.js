@@ -4,6 +4,7 @@ import Article from '../models/article';
 import { History } from 'react-router';
 
 import $ from 'jquery';
+import moment from 'moment';
 
 const ShowArticle = React.createClass({
   mixins: [History],
@@ -31,31 +32,40 @@ const ShowArticle = React.createClass({
   render() {
     let article = (this.state.article && this.state.article.toJSON()) || {};
 
-    let scrollEnd = $('body').height() - $(window).height();
-    let scrollPos = $(window).scrollTop();
-    let updateScroll = function() {
-      $('progress').prop('value', (scrollPos / scrollEnd));
+    let wordCount = article.wordCount;
+    let minutes = Math.floor(wordCount / 275);
+    if(minutes === 0) minutes = 1;
+    
+    function readingTime() {
+      if(minutes === 1) {
+        return minutes + ' minute read';
+      } else if(minutes > 1) {
+        return minutes + ' minutes read';
+      }
     }
 
-    //update progress
-    $(document).ready(updateScroll);
-    $(window).resize(updateScroll);
-    $(window).scroll(updateScroll);
+    let author = 'by ' + article.author;
+    let datePublished = 'on ' + moment(article.datePublished).format("MMM Do YYYY");
 
     let content;
 
     content = (
       <div>
         <ul className="article-wrapper">
+        <div className="article-head">
           <li className="article-component"><h1 className="article-title">{article.title}</h1></li>
-          <li className="article-component"><img className="lead-img" src={article.leadImgUrl} alt="" /></li>
-          <ul className="article-meta">
-            <li className="article-meta-component"><h3 className="article-link"><a className="external-link" href={article.url} target="_blank">{article.domain}</a></h3></li>
-            <li className="article-meta-component">{article.author}</li>
-            <li className="article-meta-component">{article.datePublished}</li>
+          <ul className="article-meta clearfix">
+            <li className="article-meta-component">
+              <a className="article-link" href={article.url} target="_blank">{article.domain}</a>
+            </li>
+            <li className="article-meta-component">{author}</li>
+            <li className="article-meta-component">{datePublished}</li>
+            <li className="article-meta-component">
+              <span className="article-word-count"><span className="bullet">&#x2022;</span> {readingTime()}</span>
+            </li>
           </ul>
+        </div>
           <li className="article-component"><div className="article-content" dangerouslySetInnerHTML={{ __html: article.content}}/></li>
-          <li className="article-component"><p className="article-word-count">{article.wordCount}</p></li>
       </ul>
       </div>
     );

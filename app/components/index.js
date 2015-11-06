@@ -52,6 +52,7 @@ var Index = React.createClass({
 
   render() {
     let articles = this.state.articles;
+
     let content;
 
        content = (
@@ -65,7 +66,7 @@ var Index = React.createClass({
           {
             articles.map((result) => {
               return (
-                  <Preview result={this.state.result} key={result.objectId} />
+                  <Preview result={result} key={result.objectId} />
               );
             })
           }

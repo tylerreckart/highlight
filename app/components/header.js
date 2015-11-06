@@ -6,10 +6,11 @@ import { Link, IndexLink } from 'react-router';
 
 const Header = React.createClass({
   mixins: [BackboneMixin],
-  
+
   getModels() {
     var currentUser = store.getSession().currentUser;
     return {
+      session: store.getSession(),
       user: store.getUser(currentUser && currentUser.objectId)
     };
   },
@@ -22,54 +23,86 @@ const Header = React.createClass({
   
   render() {
     let user = this.state.user;
+    let session = this.state.session.isAuthenticated;
 
-    return (
-      <div>
-        <nav className="top-bar" data-topbar role="navigation">
-          <ul className="title-area">
-            <li className="name">
-              <h1 className="logo-type"><IndexLink to="/">Highlight</IndexLink></h1>
-            </li>
-            <li className="search">
-              <label className="search-input-label"><i className="fa fa-search"></i></label><input type="text" className="search-input" placeholder="Search" />
-            </li>
-          </ul>
-          <ul className="title-options">
-            <li className="nav-option">
-              <button className="nav-option-toggle"><i className="fa fa-newspaper-o"></i></button>
-              <span className="tooltip">
-                <span className="triangle" />
-                <span className="tooltip-body">Browse</span>
-              </span>
-            </li>
-            <li className="nav-option">
-              <button className="nav-option-toggle"><i className="fa fa-star"></i></button>
-              <span className="tooltip">
-                <span className="triangle" />
-                <span className="tooltip-body">Favorites</span>
-              </span>
-            </li>
-            <li className="nav-option">
-              <button className="nav-option-toggle"><i className="fa fa-sticky-note-o"></i></button>
-              <span className="tooltip">
-                <span className="triangle" />
-                <span className="tooltip-body">Archive</span>
-              </span>
-            </li>
-            <li className="nav-option">
-              <button className="nav-option-toggle nav-email"><Link className="profile-link" to="profile">{user.username}</Link></button>
-              <span className="tooltip">
-                <span className="triangle" />
-                <span className="tooltip-body">Account settings &amp; more</span>
-              </span>
-            </li>
-            <li className="nav-option">
-              <button className="logout-btn" onClick={this.handleLogOut}>Log Out</button>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    )
+    if (session === true) {
+      return (
+        <div>
+          <nav className="top-bar" role="navigation">
+            <ul className="title-area">
+              <li className="name">
+                <h1 className="logo-type"><IndexLink to="/">Highlight</IndexLink></h1>
+              </li>
+              <li className="search">
+                <label className="search-input-label"><i className="fa fa-search"></i></label><input type="text" className="search-input" placeholder="Search" />
+              </li>
+            </ul>
+            <ul className="title-options">
+              <li className="nav-option">
+                <button className="nav-option-toggle"><i className="fa fa-home"></i></button>
+                <span className="tooltip">
+                  <span className="triangle" />
+                  <span className="tooltip-body">Home</span>
+                </span>
+              </li>
+              <li className="nav-option">
+                <button className="nav-option-toggle"><i className="fa fa-newspaper-o"></i></button>
+                <span className="tooltip">
+                  <span className="triangle" />
+                  <span className="tooltip-body">Browse</span>
+                </span>
+              </li>
+              <li className="nav-option">
+                <button className="nav-option-toggle"><i className="fa fa-star"></i></button>
+                <span className="tooltip">
+                  <span className="triangle" />
+                  <span className="tooltip-body">Favorites</span>
+                </span>
+              </li>
+              <li className="nav-option">
+                <button className="nav-option-toggle"><i className="fa fa-sticky-note-o"></i></button>
+                <span className="tooltip">
+                  <span className="triangle" />
+                  <span className="tooltip-body">Archive</span>
+                </span>
+              </li>
+              <li className="nav-option">
+                <button className="nav-option-toggle nav-email"><Link className="profile-link" to="profile">{user.username}</Link></button>
+                <span className="tooltip">
+                  <span className="triangle" />
+                  <span className="tooltip-body">Account settings &amp; more</span>
+                </span>
+              </li>
+              <li className="nav-option">
+                <button className="logout-btn" onClick={this.handleLogOut}>Log Out</button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <nav className="top-bar" data-topbar role="navigation">
+            <ul className="title-area">
+              <li className="name">
+                <h1 className="logo-type"><IndexLink to="/">Highlight</IndexLink></h1>
+              </li>
+            </ul>
+            <ul className="title-options">
+              <li className="nav-option">
+                <button className="signup-btn"><Link className="nav-btn-link" to="signup">Sign Up</Link></button>
+              </li>
+              <li className="nav-option">
+                <button className="login-btn"><Link className="nav-btn-link" to="login">Login</Link></button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      );
+    }
+
+    return content;
   }
 });
 

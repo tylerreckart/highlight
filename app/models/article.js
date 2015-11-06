@@ -21,6 +21,7 @@ var Article = Backbone.Model.extend({
       leadImageUrl: '',
       url: '',
       wordCount: '',
+      time: Date.now(),
       creator: {}
     };
   },

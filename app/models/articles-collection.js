@@ -1,10 +1,10 @@
 import Article from './article';
 
 var ArticlesCollection = Backbone.Collection.extend({
-  sort_key: 'createdAt', // most recent article first
+  sort_key: 'time', // most recent article first
 
-  comparator(item) {
-    return !item.get(this.sort_key);
+  comparator(model) {
+    return -model.get(this.sort_key);
   },
 
   sortByField(fieldName) {

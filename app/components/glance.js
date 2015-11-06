@@ -5,8 +5,8 @@ import { History, Link } from 'react-router';
 import $ from 'jquery';
 
 const Glance = React.createClass({
+
   handleGlance(e) {
-    e.preventDefault();
     var buttonEl = document.querySelector('#start');
     var commentEl = document.querySelector('.glance-content');
     var wpmEl = document.querySelector('#wpm');
@@ -36,8 +36,11 @@ const Glance = React.createClass({
       wordEl.style.top = ((readerEl.clientHeight / 2) - centerOffsetY) + 'px';
     }
 
-    buttonEl.addEventListener('click', function(){
-        var words = commentEl.textContent.split(/\s+/).map(processWord);
+    buttonEl.addEventListener('click', function(el){
+        var glanceContent = commentEl.innerText;
+        var stringContent = glanceContent.replace(/(<([^>]+)>)/ig, '');
+        console.log(stringContent);
+        var words = stringContent.split(/\s+/).map(processWord);
         var currentWord = 0;
         var delay = 60000 / parseInt(wpmEl.value, 10);
 
@@ -63,7 +66,7 @@ const Glance = React.createClass({
   render() {
     return (
       <div className="glance clearfix">
-        <p className="glance-content">hello</p>
+        <p className="glance-content">{this.props.result.content}</p>
         <div className="reader">
           <div className="word-display" />
         </div>
@@ -80,7 +83,7 @@ const Glance = React.createClass({
           <option value="900">900</option>
           <option value="1000">1000</option>
         </select>
-        <button id="start" onClick={this.handleGlance}>Start</button>
+        <button id="start" onClick={this.handleGlance.bind(this, this.props.result)}>Start</button>
         </div>
       </div>
     )

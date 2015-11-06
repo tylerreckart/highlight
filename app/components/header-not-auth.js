@@ -36,35 +36,10 @@ const Header = React.createClass({
           </ul>
           <ul className="title-options">
             <li className="nav-option">
-              <button className="nav-option-toggle"><i className="fa fa-newspaper-o"></i></button>
-              <span className="tooltip">
-                <span className="triangle" />
-                <span className="tooltip-body">Browse</span>
-              </span>
+              <button className="signup-btn"><Link className="nav-btn-link" to="signup">Sign Up</Link></button>
             </li>
             <li className="nav-option">
-              <button className="nav-option-toggle"><i className="fa fa-star"></i></button>
-              <span className="tooltip">
-                <span className="triangle" />
-                <span className="tooltip-body">Favorites</span>
-              </span>
-            </li>
-            <li className="nav-option">
-              <button className="nav-option-toggle"><i className="fa fa-sticky-note-o"></i></button>
-              <span className="tooltip">
-                <span className="triangle" />
-                <span className="tooltip-body">Archive</span>
-              </span>
-            </li>
-            <li className="nav-option">
-              <button className="nav-option-toggle nav-email"><Link className="profile-link" to="profile">{user.username}</Link></button>
-              <span className="tooltip">
-                <span className="triangle" />
-                <span className="tooltip-body">Account settings &amp; more</span>
-              </span>
-            </li>
-            <li className="nav-option">
-              <button className="logout-btn" onClick={this.handleLogOut}>Log Out</button>
+              <button className="login-btn"><Link className="nav-btn-link" to="login">Login</Link></button>
             </li>
           </ul>
         </nav>
