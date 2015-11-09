@@ -7,10 +7,11 @@ import PopOutMenu from './pop-out-menu';
 import moment from 'moment';
 
 const Preview = React.createClass({
+
   getInitialState() {
     return {
       glance: false,
-      popOutMenu: false
+      popOutMenu: false,
     };
   },
 
@@ -36,7 +37,7 @@ const Preview = React.createClass({
 
   render() {
     let wordCount = this.props.result.wordCount;
-    let minutes = Math.floor(wordCount / 275);
+    let minutes = Math.round(wordCount / 250);
     if(minutes === 0) minutes = 1;
     
     function readingTime() {
@@ -65,6 +66,22 @@ const Preview = React.createClass({
           <li className="article-component">
             <p className="article-content exceprt" dangerouslySetInnerHTML={{__html: this.props.result.excerpt}} />
           </li>
+          <li className="article-component">
+            <ul className="tags-list clearfix">
+              <li className="tag">
+                <span className="octothorpe">&#35;</span> tag name
+              </li>
+              <li className="tag">
+                <span className="octothorpe">&#35;</span> another tag name
+              </li>
+              <li className="tag">
+                <span className="octothorpe">&#35;</span> a cool tag
+              </li>
+              <li className="edit-btn-wrapper">
+                <button className="edit-btn">Edit</button>
+              </li>
+            </ul>
+          </li>
 
           <ul className="article-options clearfix">
 
@@ -85,7 +102,7 @@ const Preview = React.createClass({
             </li>
 
             <li className="article-option">
-              <button className="option-toggle"><i className="fa fa-sticky-note-o"></i></button>
+              <button className="option-toggle"><i className="fa fa-book"></i></button>
               <span className="tooltip">
                 <span className="triangle" />
                 <span className="tooltip-body">Archive</span>

@@ -8,6 +8,7 @@ import ArticlesCollection from '../models/articles-collection';
 
 import Glance from './glance';
 import Preview from './article-preview';
+import Paginator from 'react-pagify';
 
 import $ from 'jquery';
 
@@ -21,7 +22,7 @@ var Index = React.createClass({
 
   getModels() {
     return {
-      articles: store.getArticles()
+      articles: store.getArticles(),
     };
   },
 
@@ -51,26 +52,30 @@ var Index = React.createClass({
   },
 
   render() {
-    let articles = this.state.articles;
+    let articles = this.state.articles || [];
+    let pagination = this.state.pagination || {};
+    let paginated = Paginator.paginate(articles, pagination);
 
     let content;
 
        content = (
+        <div>
          <ul className="article-list-wrapper">
-         <div className="article-grabber">
-           <form className="article-grabber-form" onSubmit={this.handleSubmit}>
-             <input className="article-grabber-input" type="text" placeholder="article url (e.g http://www.example.com/article)" defaultValue={this.props.url} ref="articlesUrl" />
-             <button className="article-grabber-btn" type="submit"><i className="fa fa-long-arrow-right"></i></button>
-           </form>
+           <div className="article-grabber">
+             <form className="article-grabber-form" onSubmit={this.handleSubmit}>
+               <input className="article-grabber-input" type="text" placeholder="article url (e.g http://www.example.com/article)" defaultValue={this.props.url} ref="articlesUrl" />
+               <button className="article-grabber-btn" type="submit"><i className="fa fa-long-arrow-right"></i></button>
+             </form>
+           </div>
+            {
+              articles.map((result) => {
+                return (
+                    <Preview result={result} key={result.objectId} />
+                );
+              })
+            }
+           </ul>
          </div>
-          {
-            articles.map((result) => {
-              return (
-                  <Preview result={result} key={result.objectId} />
-              );
-            })
-          }
-         </ul>
        );
 
      return content;

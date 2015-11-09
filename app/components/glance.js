@@ -38,7 +38,7 @@ const Glance = React.createClass({
 
     buttonEl.addEventListener('click', function(el){
         var glanceContent = commentEl.innerText;
-        var stringContent = glanceContent.replace(/(<([^>]+)>)/ig, '');
+        var stringContent = glanceContent.replace(/(<([^>]+)>)/ig,"");
         console.log(stringContent);
         var words = stringContent.split(/\s+/).map(processWord);
         var currentWord = 0;
@@ -59,8 +59,8 @@ const Glance = React.createClass({
                 currentTimer = setTimeout(displayNextWord, delay * (hasPause ? 2 : 1));
             }
         };
-        displayNextWord();
     });
+      displayNextWord();
   },
 
   render() {
@@ -71,6 +71,7 @@ const Glance = React.createClass({
           <div className="word-display" />
         </div>
         <div className="glance-options">
+        <button id="start" onClick={this.handleGlance.bind(this, this.props.result)}>Start</button>
         <label className="select-label"><i className="fa fa-chevron-down"></i></label>
         <select id="wpm">
           <option value="200">200</option>
@@ -83,7 +84,6 @@ const Glance = React.createClass({
           <option value="900">900</option>
           <option value="1000">1000</option>
         </select>
-        <button id="start" onClick={this.handleGlance.bind(this, this.props.result)}>Start</button>
         </div>
       </div>
     )

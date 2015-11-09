@@ -33,7 +33,7 @@ const ShowArticle = React.createClass({
     let article = (this.state.article && this.state.article.toJSON()) || {};
 
     let wordCount = article.wordCount;
-    let minutes = Math.floor(wordCount / 275);
+    let minutes = Math.round(wordCount / 250);
     if(minutes === 0) minutes = 1;
     
     function readingTime() {
