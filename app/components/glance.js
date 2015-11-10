@@ -7,6 +7,8 @@ import $ from 'jquery';
 const Glance = React.createClass({
 
   handleGlance(e) {
+    // glance function adapted from a forked pen located at http://codepen.io/tylerreckart/pen/OyZBRe
+
     var buttonEl = document.querySelector('#start');
     var commentEl = document.querySelector('.glance-content');
     var wpmEl = document.querySelector('#wpm');
@@ -38,8 +40,8 @@ const Glance = React.createClass({
 
     buttonEl.addEventListener('click', function(el){
         var glanceContent = commentEl.innerText;
-        var stringContent = glanceContent.replace(/(<([^>]+)>)/ig,"");
-        console.log(stringContent);
+        var taggedContent = glanceContent.replace(/<\/p>/gm, " ");
+        var stringContent = taggedContent.replace(/(<([^>]+)>)/ig, "");
         var words = stringContent.split(/\s+/).map(processWord);
         var currentWord = 0;
         var delay = 60000 / parseInt(wpmEl.value, 10);
@@ -59,8 +61,8 @@ const Glance = React.createClass({
                 currentTimer = setTimeout(displayNextWord, delay * (hasPause ? 2 : 1));
             }
         };
+        displayNextWord();
     });
-      displayNextWord();
   },
 
   render() {

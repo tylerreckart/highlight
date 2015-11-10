@@ -78,7 +78,7 @@ const Preview = React.createClass({
                 <span className="octothorpe">&#35;</span> a cool tag
               </li>
               <li className="edit-btn-wrapper">
-                <button className="edit-btn">Edit</button>
+                <button className="edit-btn">Edit Tags</button>
               </li>
             </ul>
           </li>

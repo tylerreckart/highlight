@@ -39,13 +39,6 @@ const Header = React.createClass({
             </ul>
             <ul className="title-options">
               <li className="nav-option">
-                <button className="nav-option-toggle"><i className="fa fa-newspaper-o"></i></button>
-                <span className="tooltip">
-                  <span className="triangle" />
-                  <span className="tooltip-body">Browse</span>
-                </span>
-              </li>
-              <li className="nav-option">
                 <button className="nav-option-toggle"><i className="fa fa-star"></i></button>
                 <span className="tooltip">
                   <span className="triangle" />
@@ -53,7 +46,7 @@ const Header = React.createClass({
                 </span>
               </li>
               <li className="nav-option">
-                <button className="nav-option-toggle"><i className="fa fa-sticky-note-o"></i></button>
+                <button className="nav-option-toggle"><i className="fa fa-book"></i></button>
                 <span className="tooltip">
                   <span className="triangle" />
                   <span className="tooltip-body">Archive</span>
