@@ -5,6 +5,7 @@ import { Link, IndexLink } from 'react-router';
 import Glance from './glance';
 import PopOutMenu from './pop-out-menu';
 import moment from 'moment';
+import Icon from 'react-geomicons';
 
 const Preview = React.createClass({
 
@@ -69,13 +70,13 @@ const Preview = React.createClass({
           <li className="article-component">
             <ul className="tags-list clearfix">
               <li className="tag">
-                <span className="octothorpe">&#35;</span> tag name
+                tag name
               </li>
               <li className="tag">
-                <span className="octothorpe">&#35;</span> another tag name
+                another tag name
               </li>
               <li className="tag">
-                <span className="octothorpe">&#35;</span> a cool tag
+                a cool tag
               </li>
               <li className="edit-btn-wrapper">
                 <button className="edit-btn">Edit Tags</button>
@@ -94,7 +95,7 @@ const Preview = React.createClass({
             </li>
 
             <li className="article-option">
-              <button className="option-toggle"><i className="fa fa-star"></i></button>
+              <button className="option-toggle"><i className="fa fa-heart"></i></button>
               <span className="tooltip">
                 <span className="triangle" />
                 <span className="tooltip-body">Favorite</span>
@@ -102,7 +103,7 @@ const Preview = React.createClass({
             </li>
 
             <li className="article-option">
-              <button className="option-toggle"><i className="fa fa-book"></i></button>
+              <button className="option-toggle"><i className="fa fa-bookmark"></i></button>
               <span className="tooltip">
                 <span className="triangle" />
                 <span className="tooltip-body">Archive</span>

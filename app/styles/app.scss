@@ -25,7 +25,7 @@ $red: #DA4C56;
   padding-bottom: 6px;
   padding-left: 12px;
   padding-right: 12px;
-  font-size: 0.9em;
+  font-size: 0.8em;
   outline: none;
   color: #999999;
   background-color: white;
@@ -174,7 +174,6 @@ $red: #DA4C56;
 }
 
 .title-options {
-  font-size: 14px;
   padding: 0;
   list-style: none;
   position: absolute;
@@ -201,11 +200,10 @@ $red: #DA4C56;
 
 .nav-option-toggle {
   cursor: pointer;
-  font-size: 14px;
-  height: 20px;
   max-width: 165px;
   background-color: transparent;
   font-weight: 300;
+  font-size: 14px;
   border: 0;
   outline: 0;
   color: #222;
@@ -547,6 +545,19 @@ Tooltip(s)
   top: 25px;
 }
 
+.nav-option-toggle:hover + .nav-tooltip {
+  opactiy: 1;
+  top: 50px;
+}
+
+.nav-tooltip {
+  opacity: 1;
+  transition: all 100ms ease-in-out;
+  top: 0;
+  right: 0;
+  position: relative;
+}
+
 .tooltip {
   opacity: 0;
   top: 20px;
@@ -817,4 +828,10 @@ ShowArticle component
 .sticky{
   position: fixed;
   top: 0;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  margin-top: -250px;
+  transition: opacity 100ms ease-in;
 }
