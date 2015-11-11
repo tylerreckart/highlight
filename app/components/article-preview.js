@@ -11,9 +11,37 @@ const Preview = React.createClass({
 
   getInitialState() {
     return {
-      glance: false,
-      popOutMenu: false,
+      glance: false
     };
+  },
+
+  handleAddToArchive(result, e) {
+    store.saveToArchive({
+      author: result.author,
+      content: result.content,
+      domain: result.domain,
+      datePublished: result.date_published,
+      excerpt: result.excerpt,
+      leadImageUrl: result.lead_image_url,
+      title: result.title,
+      url: result.url,
+      wordCount: result.word_count
+    });
+    store.destroyArticle(result);
+  },
+
+  handleAddToFavorites(result, e) {
+    store.saveFavorite({
+      author: result.author,
+      content: result.content,
+      domain: result.domain,
+      datePublished: result.date_published,
+      excerpt: result.excerpt,
+      leadImageUrl: result.lead_image_url,
+      title: result.title,
+      url: result.url,
+      wordCount: result.word_count
+    });
   },
 
   handleDestroy(result, e) {
@@ -27,12 +55,6 @@ const Preview = React.createClass({
     this.setState({
       result,
       glance: !this.state.glance
-    });
-  },
-
-  handlePopOut() {
-    this.setState({
-      popOutMenu: !this.state.popOutMenu
     });
   },
 
@@ -95,7 +117,7 @@ const Preview = React.createClass({
             </li>
 
             <li className="article-option">
-              <button className="option-toggle"><i className="fa fa-heart"></i></button>
+              <button className="option-toggle" onClick={this.handleAddToFavorites.bind(this, this.props.result)}><i className="fa fa-heart"></i></button>
               <span className="tooltip">
                 <span className="triangle" />
                 <span className="tooltip-body">Favorite</span>
@@ -103,7 +125,7 @@ const Preview = React.createClass({
             </li>
 
             <li className="article-option">
-              <button className="option-toggle"><i className="fa fa-bookmark"></i></button>
+              <button className="option-toggle" onClick={this.handleAddToArchive.bind(this, this.props.result)}><i className="fa fa-bookmark"></i></button>
               <span className="tooltip">
                 <span className="triangle" />
                 <span className="tooltip-body">Archive</span>
@@ -120,7 +142,7 @@ const Preview = React.createClass({
 
             <li className="article-option">
 
-              <button className="option-toggle" onClick={this.handlePopOut.bind(this, this.props.result)}><i className="fa fa-bars"></i></button>
+              <button className="option-toggle"><i className="fa fa-bars"></i></button>
               <span className="tooltip">
                 <span className="triangle" />
                 <span className="tooltip-body">More</span>

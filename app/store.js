@@ -49,9 +49,9 @@ const Store = _.extend({}, Backbone.Events, {
     }
   },
 
-  saveToArchive() {
+  saveToArchive(article, options) {
     options = _.extend({}, options, {merge: true});
-    return archive.create(article, options) && articles.get(article.objectId).destroy();
+    return archive.create(article, options);
   },
 
   removeFromArchive(article) {

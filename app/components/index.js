@@ -22,7 +22,7 @@ var Index = React.createClass({
 
   getModels() {
     return {
-      articles: store.getArticles(),
+      articles: store.getArticles()
     };
   },
 
@@ -53,9 +53,6 @@ var Index = React.createClass({
 
   render() {
     let articles = this.state.articles || [];
-    let pagination = this.state.pagination || {};
-    let paginated = Paginator.paginate(articles, pagination);
-
     let content;
 
        content = (
