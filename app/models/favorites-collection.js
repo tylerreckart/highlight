@@ -1,6 +1,6 @@
-import Archive from './archive';
+import Favorite from './favorite';
 
-var ArchiveCollection = Backbone.Collection.extend({
+var FavoritesCollection = Backbone.Collection.extend({
   sort_key: 'time', // most recent article first
 
   comparator(model) {
@@ -12,11 +12,11 @@ var ArchiveCollection = Backbone.Collection.extend({
     this.sort();
   },
 
-  model: Archive,
-  url: 'https://api.parse.com/1/classes/Archive',
+  model: Favorite,
+  url: 'https://api.parse.com/1/classes/Favorite',
   parse(response){
     return response.results;
   }
 });
 
-export default ArchiveCollection;
+export default FavoritesCollection;
