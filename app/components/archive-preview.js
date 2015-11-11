@@ -6,27 +6,12 @@ import Glance from './glance';
 import moment from 'moment';
 import Icon from 'react-geomicons';
 
-const Preview = React.createClass({
+const ArchivePreview = React.createClass({
 
   getInitialState() {
     return {
       glance: false
     };
-  },
-
-  handleAddToArchive(result, e) {
-    store.saveToArchive({
-      author: result.author,
-      content: result.content,
-      domain: result.domain,
-      datePublished: result.date_published,
-      excerpt: result.excerpt,
-      leadImageUrl: result.lead_image_url,
-      title: result.title,
-      url: result.url,
-      wordCount: result.word_count
-    });
-    store.destroyArticle(result);
   },
 
   handleAddToFavorites(result, e) {
@@ -44,8 +29,8 @@ const Preview = React.createClass({
   },
 
   handleDestroy(result, e) {
-    if(confirm("Are you sure? This article will be permanently deleted.")){
-      store.destroyArticle(result);
+    if(confirm("Are you sure? This article will be removed from the archive and permanently deleted.")){
+      store.removeFromArchive(result);
       this.history.replaceState(null, '/');
     }
   },
@@ -124,14 +109,6 @@ const Preview = React.createClass({
             </li>
 
             <li className="article-option">
-              <button className="option-toggle" onClick={this.handleAddToArchive.bind(this, this.props.result)}><i className="fa fa-bookmark"></i></button>
-              <span className="tooltip">
-                <span className="triangle" />
-                <span className="tooltip-body">Archive</span>
-              </span>
-            </li>
-
-            <li className="article-option">
               <button className="option-toggle" onClick={this.handleDestroy.bind(this, this.props.result)}><i className="fa fa-trash-o"></i></button>
               <span className="tooltip">
                 <span className="triangle" />
@@ -156,4 +133,4 @@ const Preview = React.createClass({
   }
 });
 
-export default Preview;
+export default ArchivePreview;

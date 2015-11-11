@@ -6,7 +6,6 @@ import BackboneMixin from '../mixins/backbone';
 import Article from '../models/article';
 import ArticlesCollection from '../models/articles-collection';
 
-import Glance from './glance';
 import Preview from './article-preview';
 import Paginator from 'react-pagify';
 

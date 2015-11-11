@@ -39,10 +39,10 @@ const Header = React.createClass({
             </ul>
             <ul className="title-options">
               <li className="nav-option">
-                <button className="nav-option-toggle"><i className="fa fa-heart"></i></button>
+                <button className="nav-option-toggle"><Link className="inherit" to="favorites"><i className="fa fa-heart"></i></Link></button>
               </li>
               <li className="nav-option">
-                <button className="nav-option-toggle"><i className="fa fa-bookmark"></i></button>
+                <button className="nav-option-toggle"><Link className="inherit" to ="archive"><i className="fa fa-bookmark"></i></Link></button>
               </li>
               <li className="nav-option">
                 <button className="nav-option-toggle nav-email"><Link className="profile-link" to="profile">{user.username}</Link></button>
