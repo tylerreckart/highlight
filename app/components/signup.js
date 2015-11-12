@@ -37,11 +37,11 @@ const SignUp = React.createClass({
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className="signup-form" onSubmit={this.handleSubmit}>
         <h1>Sign Up</h1>
-        <input ref="email" placeholder="email" />
-        <input type="password" ref="password" placeholder="password" />
-        <button type="submit">Sign Up</button>
+        <input className="signup-field" ref="email" placeholder="enter an email address" />
+        <input className="signup-field" type="password" ref="password" placeholder="create a password" />
+        <button className="signup-btn" type="submit">Sign Up</button> <span className="is-it-free">It's totally free!</span>
         {this.state.error && (
           <p>{this.state.error}</p>
         )}

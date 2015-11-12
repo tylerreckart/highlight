@@ -72,6 +72,7 @@ const Preview = React.createClass({
 
     let author = 'by ' + this.props.result.author;
     let datePublished = 'on ' + moment(this.props.result.datePublished).format("MMM Do YYYY");
+    console.log(this.props.result.domain);
 
     return (
       <div className="articles-wrapper">
@@ -83,7 +84,7 @@ const Preview = React.createClass({
             <h1 className="article-title-preview"><Link to={`/article/${this.props.result.objectId}`} className="title-link">{this.props.result.title}</Link></h1>
           </li>
           <li className="article-component">
-            <a className="article-permalink" href={this.props.result.domain}>{this.props.result.domain}</a> <span className="article-preview-author">by {this.props.result.author}</span> <span className="bullet">&#x2022;</span> <span className="article-preview-reading-time">{readingTime()}</span>
+            <a className="article-permalink" href={this.props.result.url} target="_blank">{this.props.result.domain}</a> <span className="article-preview-author">by {this.props.result.author}</span> <span className="bullet">&#x2022;</span> <span className="article-preview-reading-time">{readingTime()}</span>
           </li>
           <li className="article-component">
             <p className="article-content exceprt" dangerouslySetInnerHTML={{__html: this.props.result.excerpt}} />

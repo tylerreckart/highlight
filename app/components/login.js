@@ -37,15 +37,21 @@ const Login = React.createClass({
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <h1>Login</h1>
-        <input ref="email" placeholder="email" />
-        <input type="password" ref="password" placeholder="password" />
-        <button type="submit">Login</button>
-        {this.state.error && (
-          <p>Bad login information</p>
-        )}
-      </form>
+      <div>
+        <div className="landing-hero">
+          <h1 className="hero-text">Just read.</h1>
+          <h2 className="hero-getter">Highlight is a platform for making the web more readable and gives you the tools to quickly save, organize, and view content from across the Internet.</h2>
+        </div>
+        <form className="login-form" onSubmit={this.handleSubmit}>
+          <h1>Log in to your Account</h1>
+          <input className="login-field" ref="email" placeholder="email" />
+          <input className="login-field" type="password" ref="password" placeholder="password" />
+          <button className="login-form-btn" type="submit">Login</button> <span className="forgot-link">Forgot your password?</span>
+          {this.state.error && (
+            <p>Bad login information</p>
+          )}
+        </form>
+      </div>
     )
   }
 });
