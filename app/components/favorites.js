@@ -31,6 +31,7 @@ var FavoriteIndex = React.createClass({
 
        content = (
         <div>
+         <h1 className="page-title">Favorites</h1>
          <ul className="article-list-wrapper">
             {
               articles.map((result) => {

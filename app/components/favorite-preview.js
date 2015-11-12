@@ -14,6 +14,21 @@ const FavoritePreview = React.createClass({
     };
   },
 
+  handleAddToArchive(result, e) {
+    store.saveToArchive({
+      author: result.author,
+      content: result.content,
+      domain: result.domain,
+      datePublished: result.date_published,
+      excerpt: result.excerpt,
+      leadImageUrl: result.lead_image_url,
+      title: result.title,
+      url: result.url,
+      wordCount: result.word_count
+    });
+    store.destroyArticle(result);
+  },
+
   handleDestroy(result, e) {
     if(confirm("Are you sure? This article will be removed from the archive and permanently deleted.")){
       store.removeFromArchive(result);
@@ -95,10 +110,18 @@ const FavoritePreview = React.createClass({
             </li>
 
             <li className="article-option">
+              <button className="option-toggle" onClick={this.handleAddToArchive.bind(this, this.props.result)}><i className="fa fa-bookmark"></i></button>
+              <span className="tooltip">
+                <span className="triangle" />
+                <span className="tooltip-body">Archive</span>
+              </span>
+            </li>
+
+            <li className="article-option">
               <button className="option-toggle" onClick={this.handleDestroy.bind(this, this.props.result)}><i className="fa fa-trash-o"></i></button>
               <span className="tooltip">
                 <span className="triangle" />
-                <span className="tooltip-body">Remove from Archive</span>
+                <span className="tooltip-body">Delete</span>
               </span>
             </li>
 

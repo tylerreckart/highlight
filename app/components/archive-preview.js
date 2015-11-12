@@ -65,7 +65,7 @@ const ArchivePreview = React.createClass({
           { this.state.glance ? <Glance className="glance-view clearfix" result={this.props.result} /> : null }
 
           <li className="article-component">
-            <h1 className="article-title-preview"><Link to={`/article/${this.props.result.objectId}`} className="title-link">{this.props.result.title}</Link></h1>
+            <h1 className="article-title-preview"><Link to={`/archive/${this.props.result.objectId}`} className="title-link">{this.props.result.title}</Link></h1>
           </li>
           <li className="article-component">
             <a className="article-permalink" href={this.props.result.domain}>{this.props.result.domain}</a> <span className="article-preview-author">by {this.props.result.author}</span> <span className="bullet">&#x2022;</span> <span className="article-preview-reading-time">{readingTime()}</span>

@@ -31,6 +31,7 @@ var ArchiveIndex = React.createClass({
 
        content = (
         <div>
+        <h1 className="page-title">Archive</h1>
          <ul className="article-list-wrapper">
             {
               articles.map((result) => {
