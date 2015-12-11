@@ -4,7 +4,7 @@
     "node": ">=0.10.0"
   },
   "devDependencies": {
-    "babel-core": "^6.3.13",
+    "babel-core": "^6.3.17",
     "babel-loader": "^6.2.0",
     "backbone": "^1.2.3",
     "bourbon": "^4.2.6",
