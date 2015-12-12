@@ -20,7 +20,7 @@ const Header = React.createClass({
 
     store.invalidateSession();
   },
-  
+
   render() {
     let user = this.state.user;
     let session = this.state.session.isAuthenticated;
@@ -31,7 +31,8 @@ const Header = React.createClass({
           <nav className="top-bar" role="navigation">
             <ul className="title-area">
               <li className="name">
-                <h1 className="logo-type"><IndexLink to="/">Highlight</IndexLink></h1>
+                <IndexLink to="/">
+                </IndexLink>
               </li>
               <li className="search">
                 <label className="search-input-label"><i className="fa fa-search"></i></label><input type="text" className="search-input" placeholder="Search" />
@@ -60,7 +61,8 @@ const Header = React.createClass({
           <nav className="top-bar" data-topbar role="navigation">
             <ul className="title-area">
               <li className="name">
-                <h1 className="logo-type"><IndexLink to="/">Highlight</IndexLink></h1>
+                <IndexLink to="/">
+                </IndexLink>
               </li>
             </ul>
             <ul className="title-options">

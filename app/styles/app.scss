@@ -2,7 +2,12 @@
 @import 'neat';
 @import '~font-awesome/scss/font-awesome.scss';
 
-$red: #DA4C56;
+.st0{fill:#1F1C30;}
+.st1{fill:#FFD963;}
+.st2{fill:#4BD96E;}
+.st3{fill:#5ABAF9;}
+.st4{fill:#FFAA00;}
+.st5{fill:#FF3651;}
 
 #application {
   max-width: 800px;
@@ -766,7 +771,7 @@ ShowArticle component
     font-family: "source-code-pro";
     font-size: 0.75em;
     line-height: 3em;
-  } 
+  }
 
   & blockquote {
     padding: 0;
