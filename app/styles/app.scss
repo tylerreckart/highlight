@@ -32,13 +32,8 @@ $serif-stack: 'Slabo 26px', serif;
 }
 
 .logo {
-  width: 32px;
-  height: 32px;
-
-  position: absolute;
-  top: 49%;
-  left: em(28);
-  transform: translateY(-50%);
+  width: 128px;
+  height: 128px;
 }
 
 #application {
@@ -53,7 +48,6 @@ $serif-stack: 'Slabo 26px', serif;
   height: em(90);
   top: 0;
   background-color: $white;
-  border-bottom: 1px solid #F0F0F0;
   margin: 0 auto;
   position: relative;
 }
@@ -223,48 +217,28 @@ $serif-stack: 'Slabo 26px', serif;
   border-bottom: 1px dotted #D6D6D6;
 }
 
-.article-grabber {
-  margin-bottom: em(35);
-  position: relative;
+.grabber-wrapper {
+  width: em(1122);
+  margin-top: em(27);
+  margin-left: em(88);
+  float: left;
 }
 
 .article-grabber-input {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-size: 0.9em;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 1em;
   width: 100%;
   outline: none;
-  background-color: white;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 1px solid #f0f0f0;
+  border: none;
+  background-color: $white;
+  width: 40%;
 
-  transition: all 300ms ease-in-out;
+  transition: all 500ms ease-in-out;
 
   &:focus {
-    border-bottom: 1px solid #c0c0c0;
-  }
-}
-
-.article-grabber-btn {
-  width: 40px;
-  height: 37px;
-  border: none;
-  outline: none;
-  float: right;
-  font-weight: bold;
-  outline: none;
-  background-color: white;
-  color: #999999;
-  z-index: 1000;
-  position: absolute;
-  right: 0;
-  cursor: pointer;
-  transition: all 200ms ease-in-out;
-
-  &:hover {
-    margin-top: -3px;
+    width: 100%;
+    border-bottom: 3px solid $black;
   }
 }
 
