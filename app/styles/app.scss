@@ -32,8 +32,28 @@ $serif-stack: 'Slabo 26px', serif;
 }
 
 .logo {
-  width: 128px;
-  height: 128px;
+  width: 32px;
+  height: 32px;
+}
+
+.hero-signup-btn {
+  font-family: 'Futura PT';
+  font-size: 1.25em;
+  text-decoration: none;
+  color: $black;
+  border: 2px solid $black;
+  padding-top: em(4);
+  padding-bottom: em(6);
+  padding-left: em(30);
+  padding-right: em(30);
+  border-radius: em(20);
+
+  transition: all 100ms ease-in-out;
+
+  &:hover {
+    background-color: $black;
+    color: $white;
+  }
 }
 
 #application {
@@ -839,11 +859,15 @@ Login page
 
 .hero-getter {
   font-family: $helvetica;
-  font-size: 1.25em;
+  font-size: 1.75em;
   line-height: 1.65em;
   font-weight: 300;
-  color: #b0b0b0;
+  color: $black;
   letter-spacing: 0.04em;
+  max-width: em(225);
+  margin: 0 auto;
+  margin-top: em(20);
+  margin-bottom: em(22);
 }
 
 .login-form {

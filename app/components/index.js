@@ -57,12 +57,6 @@ var Index = React.createClass({
        content = (
         <div>
          <ul className="article-list-wrapper">
-           <div className="article-grabber">
-             <form className="article-grabber-form" onSubmit={this.handleSubmit}>
-               <input className="article-grabber-input" type="text" placeholder="article url (e.g http://www.example.com/article)" defaultValue={this.props.url} ref="articlesUrl" />
-               <button className="article-grabber-btn" type="submit"><i className="fa fa-long-arrow-right"></i></button>
-             </form>
-           </div>
             {
               articles.map((result) => {
                 return (

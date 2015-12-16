@@ -61,7 +61,7 @@ const Preview = React.createClass({
     let wordCount = this.props.result.wordCount;
     let minutes = Math.round(wordCount / 250);
     if(minutes === 0) minutes = 1;
-    
+
     function readingTime() {
       if(minutes === 1) {
         return minutes + ' minute read';
@@ -88,22 +88,6 @@ const Preview = React.createClass({
           </li>
           <li className="article-component">
             <p className="article-content exceprt" dangerouslySetInnerHTML={{__html: this.props.result.excerpt}} />
-          </li>
-          <li className="article-component">
-            <ul className="tags-list clearfix">
-              <li className="tag">
-                tag name
-              </li>
-              <li className="tag">
-                another tag name
-              </li>
-              <li className="tag">
-                a cool tag
-              </li>
-              <li className="edit-btn-wrapper">
-                <button className="edit-btn">Edit Tags</button>
-              </li>
-            </ul>
           </li>
 
           <ul className="article-options clearfix">
