@@ -9,7 +9,7 @@
     "backbone": "^1.2.3",
     "bourbon": "^4.2.6",
     "bourbon-neat": "^1.7.2",
-    "css-loader": "^0.23.0",
+    "css-loader": "^0.23.1",
     "es6-promise": "^3.0.2",
     "eslint": "^1.7.3",
     "eslint-plugin-react": "^3.11.3",
