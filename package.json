@@ -30,7 +30,7 @@
     "normalize.css": "^3.0.3",
     "open-browser-webpack-plugin": "0.0.1",
     "react": "^0.14.2",
-    "react-addons-css-transition-group": "^0.14.2",
+    "react-addons-css-transition-group": "^0.14.4",
     "react-addons-update": "^0.14.2",
     "react-dom": "^0.14.2",
     "react-geomicons": "^2.0.4",
